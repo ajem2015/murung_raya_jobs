@@ -47,7 +47,7 @@
                     @foreach($kecamatans as $kecamatan)
                         <option value="{{ $kecamatan->id_kecamatan }}" 
                                 {{ request('id_kecamatan') == $kecamatan->id_kecamatan ? 'selected' : '' }}>
-                            {{ $kecamatan->nama_kecamatan }}
+                            {{ $kecamatan->Nama_kecamatan }}
                         </option>
                     @endforeach
                 </select>
@@ -62,7 +62,7 @@
                     @foreach($kategoris as $kategori)
                         <option value="{{ $kategori->id_kategori }}" 
                                 {{ request('id_kategori') == $kategori->id_kategori ? 'selected' : '' }}>
-                            {{ $kategori->nama_kategori }}
+                            {{ $kategori->Nama_kategori }}
                         </option>
                     @endforeach
                 </select>
@@ -95,7 +95,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <h5 class="card-title fw-bold text-primary mb-0">
-                                        {{ $pekerjaan->judul_pekerjaan }}
+                                        {{ $pekerjaan->Judul_pekerjaan }}
                                     </h5>
                                     @if($pekerjaan->is_active)
                                         <span class="badge bg-success">Aktif</span>
@@ -103,11 +103,11 @@
                                 </div>
                                 
                                 <p class="text-muted mb-2">
-                                    <i class="bi bi-building"></i> {{ $pekerjaan->posisi_pekerjaan }}
+                                    <i class="bi bi-building"></i> {{ $pekerjaan->Posisi_pekerjaan }}
                                 </p>
                                 
                                 <p class="card-text text-truncate-2">
-                                    {{ Str::limit($pekerjaan->deskripsi_pekerjaan, 100) }}
+                                    {{ Str::limit($pekerjaan->Deskripsi_pekerjaan, 100) }}
                                 </p>
                                 
                                 <hr>
@@ -115,28 +115,28 @@
                                 <div class="mb-2">
                                     <small class="text-muted">
                                         <i class="bi bi-geo-alt-fill text-danger"></i> 
-                                        {{ $pekerjaan->kecamatan->nama_kecamatan ?? 'N/A' }}
+                                        {{ $pekerjaan->kecamatan->Nama_kecamatan ?? 'N/A' }}
                                     </small>
                                 </div>
                                 
                                 <div class="mb-2">
                                     <small class="text-muted">
                                         <i class="bi bi-tag-fill text-info"></i> 
-                                        {{ $pekerjaan->kategori->nama_kategori ?? 'N/A' }}
+                                        {{ $pekerjaan->kategori->Nama_kategori ?? 'N/A' }}
                                     </small>
                                 </div>
                                 
-                                @if($pekerjaan->gaji_pekerjaan)
+                                @if($pekerjaan->Gaji_pekerjaan)
                                     <div class="mb-3">
                                         <small class="text-success fw-bold">
-                                            <i class="bi bi-cash"></i> {{ $pekerjaan->gaji_pekerjaan }}
+                                            <i class="bi bi-cash"></i> {{ $pekerjaan->Gaji_pekerjaan }}
                                         </small>
                                     </div>
                                 @endif
                                 
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">
-                                        <i class="bi bi-people"></i> {{ $pekerjaan->jumlah_lowongan }} posisi
+                                        <i class="bi bi-people"></i> {{ $pekerjaan->Jumlah_lowongan }} posisi
                                     </small>
                                     <a href="{{ route('jobs.detail', $pekerjaan->id_pekerjaan) }}" 
                                        class="btn btn-primary btn-sm">
@@ -148,7 +148,7 @@
                             <div class="card-footer bg-light text-muted">
                                 <small>
                                     <i class="bi bi-clock"></i> 
-                                    {{ \Carbon\Carbon::parse($pekerjaan->tanggal_posting)->diffForHumans() }}
+                                    {{ \Carbon\Carbon::parse($pekerjaan->Tanggal_posting)->diffForHumans() }}
                                 </small>
                             </div>
                         </div>

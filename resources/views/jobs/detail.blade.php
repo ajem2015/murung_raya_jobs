@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $pekerjaan->judul_pekerjaan . ' - Portal Lowongan Kerja Murung Raya')
+@section('title', $pekerjaan->Judul_pekerjaan . ' - Portal Lowongan Kerja Murung Raya')
 
 @section('content')
 <section class="py-5">
@@ -14,10 +14,10 @@
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h1 class="h2 fw-bold text-primary mb-2">
-                                    {{ $pekerjaan->judul_pekerjaan }}
+                                    {{ $pekerjaan->Judul_pekerjaan }}
                                 </h1>
                                 <p class="text-muted mb-0">
-                                    <i class="bi bi-building"></i> {{ $pekerjaan->posisi_pekerjaan }}
+                                    <i class="bi bi-building"></i> {{ $pekerjaan->Posisi_pekerjaan }}
                                 </p>
                             </div>
                             @if($pekerjaan->is_active)
@@ -36,7 +36,7 @@
                                     <i class="bi bi-geo-alt-fill text-danger fs-4 me-2"></i>
                                     <div>
                                         <small class="text-muted d-block">Lokasi</small>
-                                        <strong>{{ $pekerjaan->lokasi_pekerjaan }}</strong>
+                                        <strong>{{ $pekerjaan->Lokasi_pekerjaan }}</strong>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                     <i class="bi bi-pin-map-fill text-primary fs-4 me-2"></i>
                                     <div>
                                         <small class="text-muted d-block">Kecamatan</small>
-                                        <strong>{{ $pekerjaan->kecamatan->nama_kecamatan ?? 'N/A' }}</strong>
+                                        <strong>{{ $pekerjaan->kecamatan->Nama_kecamatan ?? 'N/A' }}</strong>
                                     </div>
                                 </div>
                             </div>
@@ -56,18 +56,18 @@
                                     <i class="bi bi-tag-fill text-info fs-4 me-2"></i>
                                     <div>
                                         <small class="text-muted d-block">Kategori</small>
-                                        <strong>{{ $pekerjaan->kategori->nama_kategori ?? 'N/A' }}</strong>
+                                        <strong>{{ $pekerjaan->kategori->Nama_kategori ?? 'N/A' }}</strong>
                                     </div>
                                 </div>
                             </div>
                             
-                            @if($pekerjaan->gaji_pekerjaan)
+                            @if($pekerjaan->Gaji_pekerjaan)
                             <div class="col-md-6">
                                 <div class="d-flex align-items-center">
                                     <i class="bi bi-cash text-success fs-4 me-2"></i>
                                     <div>
                                         <small class="text-muted d-block">Gaji</small>
-                                        <strong class="text-success">{{ $pekerjaan->gaji_pekerjaan }}</strong>
+                                        <strong class="text-success">{{ $pekerjaan->Gaji_pekerjaan }}</strong>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                     <i class="bi bi-people-fill text-warning fs-4 me-2"></i>
                                     <div>
                                         <small class="text-muted d-block">Jumlah Lowongan</small>
-                                        <strong>{{ $pekerjaan->jumlah_lowongan }} posisi</strong>
+                                        <strong>{{ $pekerjaan->Jumlah_lowongan }} posisi</strong>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                     <i class="bi bi-clock-fill text-secondary fs-4 me-2"></i>
                                     <div>
                                         <small class="text-muted d-block">Diposting</small>
-                                        <strong>{{ \Carbon\Carbon::parse($pekerjaan->tanggal_posting)->diffForHumans() }}</strong>
+                                        <strong>{{ \Carbon\Carbon::parse($pekerjaan->Tanggal_posting)->diffForHumans() }}</strong>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
                                 <i class="bi bi-file-text"></i> Deskripsi Pekerjaan
                             </h4>
                             <p class="text-justify lh-lg">
-                                {{ $pekerjaan->deskripsi_pekerjaan ?? 'Tidak ada deskripsi.' }}
+                                {{ $pekerjaan->Deskripsi_pekerjaan ?? 'Tidak ada deskripsi.' }}
                             </p>
                         </div>
 
@@ -114,7 +114,7 @@
                                 <i class="bi bi-clipboard-check"></i> Persyaratan
                             </h4>
                             <p class="text-justify lh-lg">
-                                {!! nl2br(e($pekerjaan->persyaratan_pekerjaan ?? 'Tidak ada persyaratan khusus.')) !!}
+                                {!! nl2br(e($pekerjaan->Persyaratan_pekerjaan ?? 'Tidak ada persyaratan khusus.')) !!}
                             </p>
                         </div>
 
@@ -167,15 +167,15 @@
                                 <div class="mb-3 pb-3 border-bottom">
                                     <h6 class="fw-bold mb-1">
                                         <a href="{{ route('jobs.detail', $job->id_pekerjaan) }}" class="text-decoration-none">
-                                            {{ $job->judul_pekerjaan }}
+                                            {{ $job->Judul_pekerjaan }}
                                         </a>
                                     </h6>
                                     <small class="text-muted d-block">
-                                        <i class="bi bi-geo-alt"></i> {{ $job->kecamatan->nama_kecamatan ?? 'N/A' }}
+                                        <i class="bi bi-geo-alt"></i> {{ $job->kecamatan->Nama_kecamatan ?? 'N/A' }}
                                     </small>
-                                    @if($job->gaji_pekerjaan)
+                                    @if($job->Gaji_pekerjaan)
                                         <small class="text-success">
-                                            <i class="bi bi-cash"></i> {{ $job->gaji_pekerjaan }}
+                                            <i class="bi bi-cash"></i> {{ $job->Gaji_pekerjaan }}
                                         </small>
                                     @endif
                                 </div>
