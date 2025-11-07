@@ -44,7 +44,7 @@
 
         <div class="d-flex justify-content-star gap-3 mt-4 col-lg-10 mx-auto">
             <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
-                <i class="bi bi-briefcase-fill"></i> 64 Lowongan Tersedia
+                <i class="bi bi-briefcase-fill"></i> 18 Lowongan Tersedia
             </span>
             <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
                 <i class="bi bi-geo-alt-fill"></i> 10 Kecamatan
