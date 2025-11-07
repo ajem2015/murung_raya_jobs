@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Str; @endphp
 @extends('layouts.app')
 
 @section('title', 'Beranda - Portal Lowongan Kerja Murung Raya')
@@ -7,7 +8,7 @@
 <section class="text-white bg-dark" style="background-image: linear-gradient(rgba(148, 148, 247, 0.6), rgba(46, 51, 210, 0.6)), url('{{ asset('images/bg_murungraya.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 6rem; padding-bottom: 6rem;">
     <div class="container text-center">
         <h1 class="display-4 fw-bold mb-3">
-            Kerja Dekat, Hidup Sejahtera
+            Portal Kerja Murung Raya
         </h1>
         <p class="lead mb-4">
             Cari dan temukan lowongan pekerjaan di wilayah Kabupaten Murung Raya.
@@ -73,6 +74,11 @@
                             <i class="bi bi-bar-chart-line me-2"></i> Statistik
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center rounded-pill text-dark" href="#">
+                            <i class="bi bi-journal-bookmark me-2"></i> Panduan
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -133,7 +139,7 @@
                             <small class="text-muted">
                                 <i class="bi bi-clock"></i> {{ $job['days'] }} hari yang lalu
                             </small>
-                            <a href="#" class="btn btn-primary btn-sm rounded-pill">Lihat Detail</a>
+                            <a href="{{ route('jobs.detail', ['id' => $loop->iteration]) }}" class="btn btn-primary btn-sm rounded-pill">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -165,9 +171,13 @@
             const endIndex = startIndex + jobsPerPage;
             const jobsToShow = allMoreJobs.slice(startIndex, endIndex);
             
-            jobsToShow.forEach(job => {
+            jobsToShow.forEach((job, index) => {
                 const col = document.createElement('div');
                 col.className = 'col';
+                
+                // Hitung ID untuk job load more (mulai dari 7 karena 6 job pertama)
+                const jobId = 6 + (currentPage - 1) * jobsPerPage + index + 1;
+                
                 col.innerHTML = `
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body">
@@ -200,7 +210,7 @@
                                 <small class="text-muted">
                                     <i class="bi bi-clock"></i> ${job.days} hari yang lalu
                                 </small>
-                                <a href="#" class="btn btn-primary btn-sm rounded-pill">Lihat Detail</a>
+                                <a href="/jobs/${jobId}" class="btn btn-primary btn-sm rounded-pill">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
@@ -217,4 +227,5 @@
         });
         </script>
     </div>
+</div>
 @endsection

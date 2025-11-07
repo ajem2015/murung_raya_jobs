@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}" style="margin-left: 5rem;"> 
             <div class="bg-primary rounded d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                <span class="text-white fw-bold">PK</span>
+                <span class="text-white fw-bold">SIK</span>
             </div>
             <div class="ms-3">
                 <span class="fw-bold fs-5 d-block text-dark">
@@ -29,7 +29,7 @@
                 </small>
             </div>
         </a>
-        <ul class="navbar-nav" style="margin-right: 5rem;"> <!-- me-4 untuk geser kiri -->
+        <ul class="navbar-nav" style="margin-right: 5rem;">
             <li class="nav-item">
                 <a class="btn btn-outline-secondary" href="#"> 
                     <i class="bi bi-person"></i> Login Admin
@@ -60,50 +60,85 @@
 <footer class="bg-light text-dark py-4 mt-5">
     <div class="container pt-4">
         <div class="row">
+            <!-- Kolom 1: Pemerintah Kabupaten -->
             <div class="col-lg-4 mb-4 mb-lg-0">
-                <h5 class="fw-bold">Portal Kerja Murung Raya</h5>
-                <p>
-                    Platform lowongan kerja untuk masyarakat Kabupaten Murung Raya, Kalimantan Tengah. 
-                    Bekerja dekat rumah, keluarga tetap terjaga.
-                </p>
+                <div class="d-flex align-items-center mb-3">
+                    <!-- Logo -->
+                    <div class="me-3">
+                        <img src="{{ asset('images/lambang_mura.png') }}" alt="Logo Kabupaten Murung Raya" class="img-fluid" style="width: 60px; height: 60px;">
+                    </div>
+                    <!-- Teks -->
+                    <div>
+                        <h5 class="fw-bold text-primary mb-0">PEMERINTAH KABUPATEN</h5>
+                        <h5 class="fw-bold text-primary mb-0">MURUNG RAYA</h5>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="mb-2">
+                        <i class="bi bi-geo-alt-fill text-primary"></i>
+                        Jl. Jenderal Sudirman No. 88, Puruk Cahu, Kalimantan Tengah
+                    </p>
+                    <p class="mb-1">
+                        <i class="bi bi-telephone-fill text-primary"></i>
+                        (0538) 21001
+                    </p>
+                    <p class="mb-1">
+                        <i class="bi bi-printer-fill text-primary"></i>
+                        (0538) 21002
+                    </p>
+                    <p class="mb-1">
+                        <i class="bi bi-globe text-primary"></i>
+                        <a href="https://murungrayakab.go.id" class="text-decoration-none">https://murungrayakab.go.id</a>
+                    </p>
+                    <p class="mb-0">
+                        <i class="bi bi-envelope-fill text-primary"></i>
+                        <a href="mailto:info@murungrayakab.go.id" class="text-decoration-none">info@murungrayakab.go.id</a>
+                    </p>
+                </div>
             </div>
+            
+            <!-- Kolom 2: Kecamatan -->
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <h5 class="fw-bold">Kecamatan</h5>
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li>Murara Laung</li>
-                            <li>Laung Tuhup</li>
-                            <li>Permata Intan</li>
-                            <li>Tanah Siang</li>
-                            <li>Tanah Siang Selatan</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Murara Laung</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Laung Tuhup</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Permata Intan</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Tanah Siang</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Tanah Siang Selatan</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li>Barito Tuhup Raya</li>
-                            <li>Sumber Barito</li>
-                            <li>Sungai Babuat</li>
-                            <li>Seribu Riam</li>
-                            <li>Uut Murung</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Barito Tuhup Raya</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Sumber Barito</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Sungai Babuat</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Seribu Riam</li>
+                            <li><i class="bi bi-geo-alt text-success"></i> Uut Murung</li>
                         </ul>
                     </div>
                 </div>
-            </div>  
+            </div>
+            
+            <!-- Kolom 3: Portal Kerja -->
             <div class="col-lg-4 mb-4 mb-lg-0">
-                <h5 class="fw-bold">Informasi</h5>
-                <p>
-                    Data ketenagakerjaan dikelola oleh Dinas Tenaga Kerja Kabupaten Murung Raya.
+                <h5 class="fw-bold">Portal Kerja Murung Raya</h5>
+                <p class="mb-3">
+                    Platform lowongan kerja untuk masyarakat Kabupaten Murung Raya, Kalimantan Tengah. 
+                    Bekerja dekat rumah, keluarga tetap terjaga.
                 </p>
             </div>
         </div>
     </div>
     
-    <div class="border-top mt-4 pt-3">
+    <!-- Copyright Section -->
+    <div class="border-top mt-4 pt-3 text-white" style="background-color: #798591ff;">
         <div class="container">
             <div class="text-center">
-                <p class="mb-0">&copy; {{ date('Y') }} Kabupaten Murung Raya. All rights reserved.</p>
-                <p class="mb-0 text-muted small">Portal Lowongan Kerja Berbasis Kecamatan</p>
+                <p class="mb-0">&copy; {{ date('Y') }} Pemerintah Kabupaten Murung Raya. All rights reserved.</p>
+                <p class="mb-0 text-muted small text-white">Sistem Informasi Ketenagakerjaan dan Portal Lowongan Kerja Berbasis Kecamatan</p>
             </div>
         </div>
     </div>
@@ -114,5 +149,4 @@
 
     @stack('scripts')
 </body>
-
 </html>
