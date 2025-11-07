@@ -93,7 +93,7 @@
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <h5 class="fw-bold">Informasi</h5>
                 <p>
-                    Data sebeveganojarati niederla oleh Dinus Tengig Kerja Kecamatan Murung Raya.
+                    Data ketenagakerjaan dikelola oleh Dinas Tenaga Kerja Kabupaten Murung Raya.
                 </p>
             </div>
         </div>
