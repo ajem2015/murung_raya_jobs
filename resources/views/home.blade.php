@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center gap-3 mt-4 col-lg-10 mx-auto">
+        <div class="d-flex justify-content-star gap-3 mt-4 col-lg-10 mx-auto">
             <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
                 <i class="bi bi-briefcase-fill"></i> 64 Lowongan Tersedia
             </span>
@@ -80,7 +80,7 @@
 </section>
 
 <!-- Job Listings Section -->
-<section class="py-5"> 
+<div class="py-5">
     <div class="container">
         <h2 class="fw-bold mb-4">8 Lowongan Kerja</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="job-container">
@@ -97,7 +97,7 @@
 
             @foreach($jobs as $job)
             <div class="col">
-                <div class="card border-0 shadow-sm h-100">
+                <div class="card border-0 shadow-lg h-100">
                     <div class="card-body">
                         <!-- Bagian atas: nama pekerjaan, PT, dan logo dalam satu baris -->
                         <div class="d-flex justify-content-between align-items-start mb-2">
@@ -217,5 +217,4 @@
         });
         </script>
     </div>
-</section>
 @endsection
