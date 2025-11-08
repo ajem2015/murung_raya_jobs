@@ -6,7 +6,7 @@
 <section class="text-white bg-dark" style="background-image: linear-gradient(rgba(148, 148, 247, 0.6), rgba(46, 51, 210, 0.6)), url('{{ asset('images/bg_murungraya.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 6rem; padding-bottom: 6rem;">
     <div class="container text-center">
         <h1 class="display-4 fw-bold mb-3">
-            Sistem Informasi Lowongan Pekerjaan Kabupaten Murung Raya
+            Sistem Informasi & Lowongan Pekerjaan Kabupaten Murung Raya
         </h1>
         <p class="lead mb-4">
             Cari dan temukan lowongan pekerjaan di wilayah Kabupaten Murung Raya
