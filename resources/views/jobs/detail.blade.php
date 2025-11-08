@@ -1,199 +1,248 @@
-@extends('layouts.app')
+@php use Carbon\Carbon; @endphp
 
-@section('title', $pekerjaan->Judul_pekerjaan . ' - Portal Lowongan Kerja Murung Raya')
+@include('layouts.header')
 
-@section('content')
-<section class="py-5">
+<!-- Header Section -->
+<section class="py-4 bg-white">
     <div class="container">
-        <div class="row">
-            <!-- Main Content -->
-            <div class="col-lg-8">
-                <div class="card shadow mb-4">
-                    <div class="card-body p-4">
-                        <!-- Header -->
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
-                                <h1 class="h2 fw-bold text-primary mb-2">
-                                    {{ $pekerjaan->Judul_pekerjaan }}
-                                </h1>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-building"></i> {{ $pekerjaan->Posisi_pekerjaan }}
-                                </p>
-                            </div>
-                            @if($pekerjaan->is_active)
-                                <span class="badge bg-success fs-6">Aktif</span>
-                            @else
-                                <span class="badge bg-secondary fs-6">Tidak Aktif</span>
-                            @endif
-                        </div>
-
-                        <hr>
-
-                        <!-- Meta Info -->
-                        <div class="row g-3 mb-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-geo-alt-fill text-danger fs-4 me-2"></i>
-                                    <div>
-                                        <small class="text-muted d-block">Lokasi</small>
-                                        <strong>{{ $pekerjaan->Lokasi_pekerjaan }}</strong>
-                                    </div>
+        <div class="card border-0 shadow-lg">
+            <div class="card-body p-4">
+                <!-- Breadcrumb di dalam container -->
+                <div class="mb-4">
+                    <a href="{{ route('home') }}" class="text-decoration-none text-primary">
+                        <i class="bi bi-arrow-left me-2"></i>Kembali ke Daftar Lowongan
+                    </a>
+                </div>
+        
+                <!-- Job Title and Info -->
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <h1 class="fw-bold mb-4 text-dark">{{ $pekerjaan->Judul_pekerjaan ?? 'Warehouse Supervisor' }}</h1>
+                        
+                        <div class="d-flex flex-wrap align-items-center gap-5">
+                            <!-- Company -->
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-building-fill text-primary fs-5"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Perusahaan</small>
+                                    <strong class="text-dark">{{ $pekerjaan->perusahaan->nama_perusahaan ?? 'PT. KTH COAL MINING' }}</strong>
                                 </div>
                             </div>
                             
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-pin-map-fill text-primary fs-4 me-2"></i>
-                                    <div>
-                                        <small class="text-muted d-block">Kecamatan</small>
-                                        <strong>{{ $pekerjaan->kecamatan->Nama_kecamatan ?? 'N/A' }}</strong>
-                                    </div>
+                            <!-- Location -->
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-geo-alt-fill text-danger fs-5"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Lokasi</small>
+                                    <strong class="text-dark">{{ $pekerjaan->Lokasi_pekerjaan ?? 'Sumber Barito' }}</strong>
                                 </div>
                             </div>
                             
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-tag-fill text-info fs-4 me-2"></i>
-                                    <div>
-                                        <small class="text-muted d-block">Kategori</small>
-                                        <strong>{{ $pekerjaan->kategori->Nama_kategori ?? 'N/A' }}</strong>
-                                    </div>
+                            <!-- Job Type -->
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-clock-fill text-warning fs-5"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Tipe</small>
+                                    <strong class="text-dark">{{ $pekerjaan->tipe_pekerjaan ?? 'Full-time' }}</strong>
                                 </div>
                             </div>
                             
-                            @if($pekerjaan->Gaji_pekerjaan)
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-cash text-success fs-4 me-2"></i>
-                                    <div>
-                                        <small class="text-muted d-block">Gaji</small>
-                                        <strong class="text-success">{{ $pekerjaan->Gaji_pekerjaan }}</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            @endif
-                            
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-people-fill text-warning fs-4 me-2"></i>
-                                    <div>
-                                        <small class="text-muted d-block">Jumlah Lowongan</small>
-                                        <strong>{{ $pekerjaan->Jumlah_lowongan }} posisi</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <i class="bi bi-clock-fill text-secondary fs-4 me-2"></i>
-                                    <div>
-                                        <small class="text-muted d-block">Diposting</small>
-                                        <strong>{{ \Carbon\Carbon::parse($pekerjaan->Tanggal_posting)->diffForHumans() }}</strong>
-                                    </div>
+                            <!-- Posted Date -->
+                            <div class="d-flex align-items-center ms-auto">
+                                <div class="text-end">
+                                    <small class="text-muted d-block">Diposting</small>
+                                    <strong class="text-primary">{{ Carbon::parse($pekerjaan->Tanggal_posting ?? now())->diffForHumans() }}</strong>
                                 </div>
                             </div>
                         </div>
-
-                        <hr>
-
-                        <!-- Deskripsi -->
-                        <div class="mb-4">
-                            <h4 class="fw-bold mb-3">
-                                <i class="bi bi-file-text"></i> Deskripsi Pekerjaan
-                            </h4>
-                            <p class="text-justify lh-lg">
-                                {{ $pekerjaan->Deskripsi_pekerjaan ?? 'Tidak ada deskripsi.' }}
-                            </p>
-                        </div>
-
-                        <hr>
-
-                        <!-- Persyaratan -->
-                        <div class="mb-4">
-                            <h4 class="fw-bold mb-3">
-                                <i class="bi bi-clipboard-check"></i> Persyaratan
-                            </h4>
-                            <p class="text-justify lh-lg">
-                                {!! nl2br(e($pekerjaan->Persyaratan_pekerjaan ?? 'Tidak ada persyaratan khusus.')) !!}
-                            </p>
-                        </div>
-
-                        @auth
-                            @if($pekerjaan->is_active)
-                                @if($hasApplied)
-                                    <div class="alert alert-success">
-                                        <i class="bi bi-check-circle-fill"></i> 
-                                        Anda sudah melamar pekerjaan ini.
-                                    </div>
-                                @else
-                                    <form method="POST" action="{{ route('jobs.apply', $pekerjaan->id_pekerjaan) }}" 
-                                          onsubmit="return confirm('Yakin ingin melamar pekerjaan ini?');">
-                                        @csrf
-                                        <button type="submit" class="btn btn-primary btn-lg w-100">
-                                            <i class="bi bi-send-fill"></i> Lamar Pekerjaan Ini
-                                        </button>
-                                    </form>
-                                @endif
-                            @else
-                                <div class="alert alert-warning">
-                                    <i class="bi bi-exclamation-triangle-fill"></i> 
-                                    Lowongan ini sudah tidak aktif.
-                                </div>
-                            @endif
-                        @else
-                            <div class="alert alert-info">
-                                <i class="bi bi-info-circle-fill"></i> 
-                                Anda harus <a href="{{ route('login') }}" class="fw-bold">login</a> 
-                                atau <a href="{{ route('register') }}" class="fw-bold">daftar</a> 
-                                untuk melamar pekerjaan ini.
-                            </div>
-                        @endauth
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <!-- Similar Jobs -->
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">
-                            <i class="bi bi-briefcase"></i> Lowongan Serupa
-                        </h5>
+<!-- Main Content -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <!-- Left Column - Job Details -->
+            <div class="col-lg-8">
+                <!-- Job Description -->
+                <div class="card mb-4 border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-3 text-dark">
+                            <i class="bi bi-file-text me-2" style="color: #6f42c1"></i>Deskripsi Pekerjaan
+                        </h4>
+                        <div class="text-muted fs-6 lh-lg">
+                            @if($pekerjaan->Deskripsi_pekerjaan)
+                                {!! nl2br(e($pekerjaan->Deskripsi_pekerjaan)) !!}
+                            @else
+                                <p>Bertanggung jawab untuk mengoperasikan dan merawat alat berat dalam kegiatan operasional perusahaan. Melakukan inspeksi rutin, memastikan keselamatan kerja, dan berkoordinasi dengan tim terkait.</p>
+                                
+                                <p><strong>Tanggung Jawab Utama:</strong></p>
+                                <ul>
+                                    <li>Mengoperasikan alat berat sesuai prosedur</li>
+                                    <li>Melakukan maintenance harian</li>
+                                    <li>Memastikan compliance K3</li>
+                                    <li>Berkolaborasi dengan tim operasional</li>
+                                </ul>
+                            @endif
+                        </div>
                     </div>
-                    <div class="card-body">
-                        @if($similarJobs->count() > 0)
-                            @foreach($similarJobs as $job)
-                                <div class="mb-3 pb-3 border-bottom">
-                                    <h6 class="fw-bold mb-1">
-                                        <a href="{{ route('jobs.detail', $job->id_pekerjaan) }}" class="text-decoration-none">
-                                            {{ $job->Judul_pekerjaan }}
-                                        </a>
-                                    </h6>
-                                    <small class="text-muted d-block">
-                                        <i class="bi bi-geo-alt"></i> {{ $job->kecamatan->Nama_kecamatan ?? 'N/A' }}
-                                    </small>
-                                    @if($job->Gaji_pekerjaan)
-                                        <small class="text-success">
-                                            <i class="bi bi-cash"></i> {{ $job->Gaji_pekerjaan }}
-                                        </small>
-                                    @endif
+                </div>
+
+                <!-- Qualifications -->
+                <div class="card mb-4 border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-3 text-dark">
+                            <i class="bi bi-list-check me-2 text-success"></i>Kualifikasi & Persyaratan
+                        </h4>
+                        <div class="text-muted fs-6 lh-lg">
+                            {!! nl2br(e($pekerjaan->Persyaratan_pekerjaan ?? 'Pendidikan minimal SLTA/SMK Sederajat
+                Memiliki pengalaman minimal 2 tahun sebagai operator excavator
+                Memiliki Surat Izin Operator (SIO) yang masih aktif
+                Bersedia ditempatkan di lokasi site
+                Memahami prosedur keselamatan kerja (K3)
+                Dapat bekerja dalam tim maupun individu
+                Disiplin, jujur, dan bertanggung jawab')) !!}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Company -->
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-3 text-dark">
+                            <i class="bi bi-building me-2 text-primary"></i>Tentang Perusahaan
+                        </h4>
+                        <div class="text-muted fs-6 lh-lg">
+                            {!! nl2br(e($pekerjaan->perusahaan->deskripsi ?? 'PT. Tambang Berkah Utama adalah perusahaan pertambangan terkemuka yang beroperasi di wilayah Kalimantan Tengah. Dengan pengalaman lebih dari 15 tahun, kami berkomitmen untuk menjalankan operasi pertambangan yang bertanggung jawab dan berkelanjutan.
+
+                Kami percaya bahwa karyawan adalah aset terpenting perusahaan. Oleh karena itu, kami menyediakan lingkungan kerja yang aman, pelatihan berkelanjutan, dan kesempatan pengembangan karir bagi seluruh karyawan kami.')) !!}
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Right Column - Application Form -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-lg sticky-top">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-4 text-dark">
+                                <i class="bi bi-pencil-square me-2 text-info"></i>Formulir Lamaran
+                            </h4>
+                        
+                        @if($pekerjaan->is_active ?? true)
+                            @if($hasApplied ?? false)
+                                <div class="alert alert-success text-center py-4">
+                                    <i class="bi bi-check-circle-fill fs-1 text-success mb-3 d-block"></i>
+                                    <strong class="fs-5">Anda sudah melamar pekerjaan ini.</strong>
                                 </div>
-                            @endforeach
+                            @else
+                                <form method="POST" action="#" enctype="multipart/form-data">
+                                    @csrf
+
+                                    <!-- NIK -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">NIK</label>
+                                        <input type="text" class="form-control" name="nik" placeholder="Masukkan NIK (16 digit)" required 
+                                            pattern="[0-9]{16}" title="NIK harus 16 digit angka"
+                                            maxlength="16" minlength="16">
+                                        <div class="form-text">Contoh: 1234567890123456</div>
+                                    </div>
+                                    
+                                    <!-- Full Name -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Nama Lengkap</label>
+                                        <input type="text" class="form-control" name="nama_lengkap" placeholder="Masukkan nama lengkap" required>
+                                    </div>
+
+                                    <!-- Gender -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Jenis Kelamin</label>
+                                        <div class="d-flex gap-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="laki-laki" value="Laki-laki" required>
+                                                <label class="form-check-label" for="laki-laki">Laki-laki</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="perempuan" value="Perempuan" required>
+                                                <label class="form-check-label" for="perempuan">Perempuan</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Birth Date -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Tanggal Lahir</label>
+                                        <input type="date" class="form-control" name="tanggal_lahir" required>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Alamat Lengkap</label>
+                                        <textarea class="form-control" name="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
+                                    </div>
+
+                                    <!-- District -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Kecamatan</label>
+                                        <select class="form-select" name="kecamatan" required>
+                                            <option value="">Pilih Kecamatan</option>
+                                            <option value="1">Sumber Barito</option>
+                                            <option value="2">Muara Laung</option>
+                                            <option value="3">Permata Intan</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Nomor Telepon / WhatsApp</label>
+                                        <input type="tel" class="form-control" name="telepon" placeholder="Contoh: 081234567890" required>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold text-dark">Email</label>
+                                        <input type="email" class="form-control" name="email" placeholder="Masukkan email Anda" required>
+                                    </div>
+
+                                    <!-- CV Upload -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold text-dark">Upload CV</label>
+                                        <input type="file" class="form-control" name="cv" accept=".pdf,.doc,.docx" required>
+                                        <div class="form-text text-center mt-2">
+                                            <strong>Upload File CV mu Di sini!</strong>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">
+                                        <i class="bi bi-send-fill me-2"></i>Kirim Lamaran
+                                    </button>
+                                </form>
+                            @endif
                         @else
-                            <p class="text-muted mb-0">Tidak ada lowongan serupa.</p>
+                            <div class="alert alert-warning text-center py-4">
+                                <i class="bi bi-exclamation-triangle-fill fs-1 text-warning mb-3 d-block"></i>
+                                <strong class="fs-5">Lowongan ini sudah tidak aktif.</strong>
+                            </div>
                         @endif
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Back Button -->
-        <div class="mt-4">
-            <a href="{{ route('home') }}" class="btn btn-outline-secondary">
-                <i class="bi bi-arrow-left"></i> Kembali ke Beranda
-            </a>
-        </div>
     </div>
 </section>
-@endsection
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+@include('layouts.footer')

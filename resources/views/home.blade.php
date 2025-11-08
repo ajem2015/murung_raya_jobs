@@ -1,9 +1,7 @@
 @php use Illuminate\Support\Str; @endphp
-@extends('layouts.app')
 
-@section('title', 'Beranda - Portal Lowongan Kerja Murung Raya')
+@include('layouts.header')
 
-@section('content')
 <!-- Hero Section -->
 <section class="text-white bg-dark" style="background-image: linear-gradient(rgba(148, 148, 247, 0.6), rgba(46, 51, 210, 0.6)), url('{{ asset('images/bg_murungraya.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 6rem; padding-bottom: 6rem;">
     <div class="container text-center">
@@ -123,7 +121,7 @@
                                 <i class="bi bi-geo-alt-fill text-danger"></i> {{ $job['location'] }}
                             </p>
                             <p class="card-text mb-2 small">
-                                <i class="bi bi-cash-stack"></i> {{ $job['salary'] }}
+                                <i class="bi bi-cash-stack text-success"></i> {{ $job['salary'] }}
                             </p>
                         </div>
 
@@ -137,7 +135,7 @@
                         <!-- Footer dengan tanggal dan tombol -->
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-muted">
-                                <i class="bi bi-clock"></i> {{ $job['days'] }} hari yang lalu
+                                <i class="bi bi-clock text-warning"></i> {{ $job['days'] }} hari yang lalu
                             </small>
                             <a href="{{ route('jobs.detail', ['id' => $loop->iteration]) }}" class="btn btn-primary btn-sm rounded-pill">Lihat Detail</a>
                         </div>
@@ -179,7 +177,7 @@
                 const jobId = 6 + (currentPage - 1) * jobsPerPage + index + 1;
                 
                 col.innerHTML = `
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="card border-0 shadow-lg h-100">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -196,7 +194,7 @@
                                     <i class="bi bi-geo-alt-fill text-danger"></i> ${job.location}
                                 </p>
                                 <p class="card-text mb-2 small">
-                                    <i class="bi bi-cash-stack"></i> ${job.salary}
+                                    <i class="bi bi-cash-stack text-success"></i> ${job.salary}
                                 </p>
                             </div>
 
@@ -208,7 +206,7 @@
 
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted">
-                                    <i class="bi bi-clock"></i> ${job.days} hari yang lalu
+                                    <i class="bi bi-clock text-warning"></i> ${job.days} hari yang lalu
                                 </small>
                                 <a href="/jobs/${jobId}" class="btn btn-primary btn-sm rounded-pill">Lihat Detail</a>
                             </div>
@@ -228,4 +226,5 @@
         </script>
     </div>
 </div>
-@endsection
+
+@include('layouts.footer')
