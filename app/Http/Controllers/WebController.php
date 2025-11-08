@@ -48,6 +48,57 @@ class WebController extends Controller
     }
 
     /**
+     * Show panduan page
+     */
+    public function panduan()
+    {
+        return view('panduan');
+    }
+
+    /**
+     * Show peta
+     */
+    public function peta()
+    {
+        // Ambil data lowongan dengan koordinat kecamatan
+        $pekerjaans = Pekerjaan::with('kecamatan')->get();
+        $kecamatans = Kecamatan::all();
+        
+        return view('peta', compact('pekerjaans', 'kecamatans'));
+    }
+
+    /**
+     * Show statistics page
+     */
+    public function statistik()
+    {
+        // Data untuk dashboard statistik
+        $stats = [
+            'usia_produktif' => 42150,
+            'bekerja' => 35892,
+            'pengangguran' => 1247,
+            'tersertifikasi' => 8430,
+            'tpt' => 6.1 // dalam persen
+        ];
+
+        // Data kecamatan untuk comparison table
+        $kecamatans = Kecamatan::all()->map(function($kecamatan) {
+            // Data dummy untuk demo - sesuaikan dengan struktur database Anda
+            return (object)[
+                'nama_kecamatan' => $kecamatan->nama_kecamatan,
+                'usia_produktif' => rand(5000, 15000),
+                'bekerja' => rand(4000, 12000),
+                'pengangguran' => rand(50, 300),
+                'tpt' => rand(3, 10),
+                'tersertifikasi' => rand(200, 1000),
+                'tren' => rand(-1, 1)
+            ];
+        });
+
+        return view('statistik', compact('stats', 'kecamatans'));
+    }
+
+    /**
      * Show job detail
      */
     public function jobDetail($id)

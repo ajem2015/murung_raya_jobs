@@ -21,6 +21,15 @@ Route::get('/', [WebController::class, 'home'])->name('home');
 Route::get('/jobs/{id}', [WebController::class, 'jobDetail'])->name('jobs.detail');
 Route::post('/jobs/{id}/apply', [WebController::class, 'jobApply'])->name('jobs.apply')->middleware('auth');
 
+// Panduan Page
+Route::get('/panduan', [WebController::class, 'panduan'])->name('panduan');
+
+// Peta Page
+Route::get('/peta', [WebController::class, 'peta'])->name('peta');
+
+// Statistik Page - TAMBAH INI
+Route::get('/statistik', [WebController::class, 'statistik'])->name('statistik');
+
 // Authentication Routes
 Route::get('/login', [WebController::class, 'showLogin'])->name('login');
 Route::post('/login', [WebController::class, 'login'])->name('login.post');

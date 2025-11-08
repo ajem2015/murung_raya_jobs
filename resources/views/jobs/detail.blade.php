@@ -105,13 +105,25 @@
                             <i class="bi bi-list-check me-2 text-success"></i>Kualifikasi & Persyaratan
                         </h4>
                         <div class="text-muted fs-6 lh-lg">
-                            {!! nl2br(e($pekerjaan->Persyaratan_pekerjaan ?? 'Pendidikan minimal SLTA/SMK Sederajat
-                Memiliki pengalaman minimal 2 tahun sebagai operator excavator
-                Memiliki Surat Izin Operator (SIO) yang masih aktif
-                Bersedia ditempatkan di lokasi site
-                Memahami prosedur keselamatan kerja (K3)
-                Dapat bekerja dalam tim maupun individu
-                Disiplin, jujur, dan bertanggung jawab')) !!}
+                            @if($pekerjaan->Persyaratan_pekerjaan)
+                                <ul class="mb-0">
+                                    @foreach(explode("\n", $pekerjaan->Persyaratan_pekerjaan) as $persyaratan)
+                                        @if(trim($persyaratan))
+                                            <li>{{ trim($persyaratan) }}</li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            @else
+                                <ul class="mb-0">
+                                    <li>Pendidikan minimal SLTA/SMK Sederajat</li>
+                                    <li>Memiliki pengalaman minimal 2 tahun sebagai operator excavator</li>
+                                    <li>Memiliki Surat Izin Operator (SIO) yang masih aktif</li>
+                                    <li>Bersedia ditempatkan di lokasi site</li>
+                                    <li>Memahami prosedur keselamatan kerja (K3)</li>
+                                    <li>Dapat bekerja dalam tim maupun individu</li>
+                                    <li>Disiplin, jujur, dan bertanggung jawab</li>
+                                </ul>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -123,13 +135,17 @@
                             <i class="bi bi-building me-2 text-primary"></i>Tentang Perusahaan
                         </h4>
                         <div class="text-muted fs-6 lh-lg">
-                            {!! nl2br(e($pekerjaan->perusahaan->deskripsi ?? 'PT. Tambang Berkah Utama adalah perusahaan pertambangan terkemuka yang beroperasi di wilayah Kalimantan Tengah. Dengan pengalaman lebih dari 15 tahun, kami berkomitmen untuk menjalankan operasi pertambangan yang bertanggung jawab dan berkelanjutan.
-
-                Kami percaya bahwa karyawan adalah aset terpenting perusahaan. Oleh karena itu, kami menyediakan lingkungan kerja yang aman, pelatihan berkelanjutan, dan kesempatan pengembangan karir bagi seluruh karyawan kami.')) !!}
+                            @if($pekerjaan->perusahaan->deskripsi ?? false)
+                                {!! nl2br(e($pekerjaan->perusahaan->deskripsi)) !!}
+                            @else
+                                <p>PT. Tambang Berkah Utama adalah perusahaan pertambangan terkemuka yang beroperasi di wilayah Kalimantan Tengah. Dengan pengalaman lebih dari 15 tahun, kami berkomitmen untuk menjalankan operasi pertambangan yang bertanggung jawab dan berkelanjutan.</p>
+                                
+                                <p>Kami percaya bahwa karyawan adalah aset terpenting perusahaan. Oleh karena itu, kami menyediakan lingkungan kerja yang aman, pelatihan berkelanjutan, dan kesempatan pengembangan karir bagi seluruh karyawan kami.</p>
+                            @endif
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
 
                 <!-- Right Column - Application Form -->
                 <div class="col-lg-4">
