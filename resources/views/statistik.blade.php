@@ -9,7 +9,7 @@
         <p class="lead mb-4">
             Analisis Data Real-Time untuk Perencanaan Pembangunan Daerah
             <br>
-            Berbasis Decision Support System (DSS) Terintegrasi
+            Monitoring Tren dan Evaluasi Kinerja Berbasis Metrik
         </p>
 
         <div class="d-flex justify-content-center gap-3 mt-4 col-lg-10 mx-auto">
@@ -68,6 +68,62 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Metrics Dashboard -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people-fill display-6 text-primary mb-3"></i>
+                        <h3 class="fw-bold text-primary">42,150</h3>
+                        <p class="fw-bold mb-1">Usia Produktif</p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 2.3% dari 2023
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-briefcase-fill display-6 text-success mb-3"></i>
+                        <h3 class="fw-bold text-success">35,892</h3>
+                        <p class="fw-bold mb-1">Bekerja</p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 4.1% pertumbuhan
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-x-fill display-6 text-danger mb-3"></i>
+                        <h3 class="fw-bold text-danger">1,247</h3>
+                        <p class="fw-bold mb-1">Pengangguran</p>
+                        <small class="text-danger">
+                            <i class="bi bi-arrow-down"></i> 8.5% TPT
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-briefcase display-6 text-warning mb-3"></i>
+                        <h3 class="fw-bold text-warning">248</h3>
+                        <p class="fw-bold mb-1"><strong>Lowongan</strong></p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 12 baru bulan ini
+                        </small>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -132,62 +188,6 @@
                         <button class="btn btn-primary">
                             <i class="bi bi-arrow-clockwise me-2"></i>Terapkan Filter
                         </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Key Metrics Dashboard -->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-body text-center">
-                        <i class="bi bi-people-fill display-6 text-primary mb-3"></i>
-                        <h3 class="fw-bold text-primary">42,150</h3>
-                        <p class="text-muted mb-1">Usia Produktif</p>
-                        <small class="text-success">
-                            <i class="bi bi-arrow-up"></i> 2.3% dari 2023
-                        </small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-body text-center">
-                        <i class="bi bi-briefcase-fill display-6 text-success mb-3"></i>
-                        <h3 class="fw-bold text-success">35,892</h3>
-                        <p class="text-muted mb-1">Bekerja</p>
-                        <small class="text-success">
-                            <i class="bi bi-arrow-up"></i> 4.1% pertumbuhan
-                        </small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-body text-center">
-                        <i class="bi bi-person-x-fill display-6 text-danger mb-3"></i>
-                        <h3 class="fw-bold text-danger">1,247</h3>
-                        <p class="text-muted mb-1">Pengangguran</p>
-                        <small class="text-danger">
-                            <i class="bi bi-arrow-down"></i> 8.5% TPT
-                        </small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-body text-center">
-                        <i class="bi bi-award-fill display-6 text-info mb-3"></i>
-                        <h3 class="fw-bold text-info">8,430</h3>
-                        <p class="text-muted mb-1">Tersertifikasi</p>
-                        <small class="text-success">
-                            <i class="bi bi-arrow-up"></i> 15.2% peningkatan
-                        </small>
                     </div>
                 </div>
             </div>
@@ -370,9 +370,9 @@
             </div>
         </div>
 
-        <!-- Bottom Section - 3 Columns in 1 Row -->
+        <!-- Bottom Section - 2 Columns in 1 Row -->
         <div class="row mt-4">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <!-- DSS Insights -->
                 <div class="card shadow-lg h-100">
                     <div class="card-header bg-white">
@@ -397,58 +397,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4">
-                <!-- Certification Progress -->
-                <div class="card shadow-lg h-100">
-                    <div class="card-header bg-white">
-                        <h5 class="fw-bold mb-0">
-                            <i class="bi bi-award me-2 text-success"></i>
-                            Progress Sertifikasi Kompetensi
-                        </h5>
-                    </div>
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <small class="fw-semibold">SIO Pertambangan</small>
-                                <small class="fw-bold text-primary">72%</small>
-                            </div>
-                            <div class="progress mb-3" style="height: 10px;">
-                                <div class="progress-bar bg-primary" style="width: 72%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <small class="fw-semibold">BNSP Perkebunan</small>
-                                <small class="fw-bold text-success">58%</small>
-                            </div>
-                            <div class="progress mb-3" style="height: 10px;">
-                                <div class="progress-bar bg-success" style="width: 58%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <small class="fw-semibold">K3 Umum</small>
-                                <small class="fw-bold text-warning">45%</small>
-                            </div>
-                            <div class="progress mb-3" style="height: 10px;">
-                                <div class="progress-bar bg-warning" style="width: 45%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-0">
-                            <div class="d-flex justify-content-between mb-1">
-                                <small class="fw-semibold">Sertifikasi Kompetensi</small>
-                                <small class="fw-bold text-info">35%</small>
-                            </div>
-                            <div class="progress" style="height: 10px;">
-                                <div class="progress-bar bg-info" style="width: 35%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
+            
+            <div class="col-lg-6">
                 <!-- Quick Export -->
                 <div class="card shadow-lg h-100">
                     <div class="card-header bg-white">
@@ -464,9 +414,6 @@
                             </button>
                             <button class="btn btn-outline-success btn-lg py-3">
                                 <i class="bi bi-file-earmark-excel me-2 fs-5"></i>Data Excel
-                            </button>
-                            <button class="btn btn-outline-info btn-lg py-3">
-                                <i class="bi bi-graph-up me-2 fs-5"></i>Analisis DSS
                             </button>
                         </div>
                     </div>

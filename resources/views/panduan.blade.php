@@ -130,14 +130,67 @@
                         <h4 class="fw-bold mb-3 text-dark">
                             <i class="bi bi-globe me-2 text-primary"></i>Panduan Penggunaan Portal
                         </h4>
-                        <ol class="text-muted">
-                            <li class="mb-2">Masukkan kata kunci pekerjaan di kolom pencarian di halaman utama</li>
-                            <li class="mb-2">Pilih kecamatan untuk memfilter lowongan berdasarkan lokasi</li>
-                            <li class="mb-2">Gunakan menu navigasi untuk berpindah antara Lowongan, Peta DSS, Statistik, dan Panduan</li>
-                            <li class="mb-2">Klik "Lihat Detail" pada lowongan untuk informasi lengkap</li>
-                            <li class="mb-2">Manfaatkan fitur Decision Support System (DSS) untuk analisis data ketenagakerjaan</li>
-                            <li class="mb-2">Gunakan dashboard interaktif untuk monitoring dan evaluasi pembangunan ketenagakerjaan</li>
-                        </ol>
+                        
+                        <!-- Langkah 1 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-primary rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">1</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Masuk ke Portal</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Buka alamat <strong>website resmi Portal Kerja Murung Raya</strong></li>
+                                        <li class="mb-0">• Kamu bisa <strong>menjelajahi lowongan kerja tanpa harus login</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 2 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-primary rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">2</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Menjelajahi Lowongan</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Di <strong>halaman utama</strong>, kamu bisa melihat daftar semua lowongan kerja yang tersedia</li>
+                                        <li class="mb-1">• Gunakan <strong>kolom pencarian</strong> untuk menemukan pekerjaan tertentu</li>
+                                        <li class="mb-1">• Gunakan <strong>filter Kecamatan</strong> untuk menampilkan lowongan berdasarkan lokasi</li>
+                                        <li class="mb-1">• Gunakan <strong>filter Sektor</strong> untuk menampilkan lowongan berdasarkan Sektor Pekerjaan</li>
+                                        <li class="mb-0">• Klik tombol <strong>"Lihat Detail"</strong> untuk membuka informasi lengkap tentang lowongan tersebut</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 3 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-primary rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">3</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Menampilkan Lowongan dalam Mode Peta atau Daftar</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Klik tab <strong>"Peta"</strong> untuk melihat persebaran lowongan kerja secara geografis</li>
+                                        <li class="mb-0">• Klik tab <strong>"Lowongan"</strong> untuk menampilkan lowongan dalam bentuk list (seperti tampilan kartu)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 5: Peta Digital Ketenagakerjaan -->
+                        <div class="mb-0">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-primary rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">4</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Peta Digital Ketenagakerjaan</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• <strong>Klik Kecamatan</strong> pada peta untuk melihat lowongan pekerjaan</li>
+                                        <li class="mb-1">• Setiap kecamatan akan menampilkan <strong>daftar lowongan yang tersedia</strong></li>
+                                        <li class="mb-1">• Gunakan <strong>zoom dan pan</strong> untuk menjelajahi wilayah tertentu</li>
+                                        <li class="mb-0">• Peta menunjukkan <strong>persebaran geografis kesempatan kerja</strong> di Kabupaten Murung Raya</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -147,85 +200,72 @@
                         <h4 class="fw-bold mb-3 text-dark">
                             <i class="bi bi-send-check me-2 text-success"></i>Panduan Pelamaran Kerja
                         </h4>
-                        <ol class="text-muted">
-                            <li class="mb-2">Pilih lowongan yang sesuai dengan kualifikasi dan sertifikasi Anda</li>
-                            <li class="mb-2">Klik "Lihat Detail" untuk membaca deskripsi pekerjaan secara lengkap</li>
-                            <li class="mb-2">Pastikan Anda memenuhi semua persyaratan yang diminta termasuk sertifikasi kompetensi</li>
-                            <li class="mb-2">Isi formulir lamaran dengan data yang valid dan benar sesuai KTP</li>
-                            <li class="mb-2">Siapkan CV dan dokumen sertifikasi dalam format PDF sebelum mengupload</li>
-                            <li class="mb-2">Pastikan NIK dan data pribadi sesuai dengan kartu identitas</li>
-                            <li class="mb-2">Klik "Kirim Lamaran" dan tunggu konfirmasi dari perusahaan</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- Program Sertifikasi & Kartu HEBAT -->
-                <div class="card mb-4 border-0 shadow-lg">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold mb-3 text-dark">
-                            <i class="bi bi-award me-2 text-warning"></i>Program Sertifikasi & Kartu HEBAT
-                        </h4>
-                        <div class="alert alert-info mb-3">
-                            <i class="bi bi-info-circle me-2"></i>
-                            <strong>Mendukung Visi RPJMD Murung Raya 2025-2029</strong> dalam akselerasi tenaga kerja tersertifikasi
-                        </div>
-                        <ol class="text-muted">
-                            <li class="mb-2"><strong>Daftar Program Pelatihan:</strong> Akses melalui Dinas Tenaga Kerja dan Transmigrasi</li>
-                            <li class="mb-2"><strong>Kartu HEBAT:</strong> Manfaatkan untuk akses pelatihan sertifikasi gratis</li>
-                            <li class="mb-2"><strong>Uji Kompetensi:</strong> Ikuti uji kompetensi untuk mendapatkan sertifikasi BNSP</li>
-                            <li class="mb-2"><strong>Sertifikasi Kompetensi:</strong> Tingkatkan daya saing dengan sertifikasi resmi</li>
-                            <li class="mb-2"><strong>Penempatan Kerja:</strong> Manfaatkan sertifikasi untuk akses lowongan prioritas</li>
-                            <li class="mb-2"><strong>Monitoring & Evaluasi:</strong> Sistem mendukung pengendalian perencanaan pembangunan daerah sesuai PP No. 8/2008</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- Panduan Peta -->
-                <div class="card mb-4 border-0 shadow-lg">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold mb-3 text-dark">
-                            <i class="bi bi-map me-2 text-danger"></i>Panduan Peta Ketenagakerjaan
-                        </h4>
-                        <ol class="text-muted">
-                            <li class="mb-2">Akses menu "Peta" untuk melihat sebaran spasial lowongan kerja</li>
-                            <li class="mb-2">Gunakan fitur <strong>Hotspot Analysis</strong> untuk identifikasi wilayah pengangguran</li>
-                            <li class="mb-2">Manfaatkan <strong>Buffer Analysis</strong> untuk analisis aksesibilitas lowongan</li>
-                            <li class="mb-2">Gunakan <strong>Choropleth Mapping</strong> untuk visualisasi data ketenagakerjaan</li>
-                            <li class="mb-2">Klik marker pada peta untuk melihat analisis DSS setiap kecamatan</li>
-                            <li class="mb-2">Manfaatkan data spasial untuk perencanaan pembangunan daerah berbasis evidence</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- TAMBAHKAN: FAQ Decision Support System -->
-                <div class="card mb-4 border-0 shadow-lg">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold mb-3 text-dark">
-                            <i class="bi bi-question-circle me-2 text-info"></i>FAQ Decision Support System (DSS)
-                        </h4>
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                        Apa itu Decision Support System (DSS)?
-                                    </button>
-                                </h2>
-                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        DSS adalah sistem terintegrasi yang membantu pengambilan keputusan berbasis data spasial dan analitik ketenagakerjaan untuk perencanaan pembangunan daerah.
-                                    </div>
+                        
+                        <!-- Langkah 1 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-success rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">1</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Pilih Lowongan yang Sesuai</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Pilih lowongan yang sesuai dengan <strong>kualifikasi dan sertifikasi</strong> Anda</li>
+                                        <li class="mb-0">• Klik <strong>"Lihat Detail"</strong> untuk membaca deskripsi pekerjaan secara lengkap</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                        Bagaimana cara menggunakan fitur Hotspot Analysis?
-                                    </button>
-                                </h2>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Akses menu Peta → Pilih "Hotspot Analysis" → Sistem akan menampilkan wilayah dengan konsentrasi pengangguran tertinggi.
-                                    </div>
+                        </div>
+
+                        <!-- Langkah 2 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-success rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">2</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Verifikasi Persyaratan</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Pastikan Anda memenuhi <strong>semua persyaratan</strong> yang diminta</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 3 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-success rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">3</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Isi Formulir Lamaran</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Isi formulir lamaran dengan <strong>data yang valid dan benar</strong> sesuai KTP</li>
+                                        <li class="mb-0">• Pastikan <strong>NIK dan data pribadi</strong> sesuai dengan kartu identitas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 4 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-success rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">4</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Siapkan Dokumen</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Siapkan <strong>CV dan dokumen sertifikasi</strong> dalam format PDF</li>
+                                        <li class="mb-0">• Pastikan dokumen <strong>sudah siap sebelum mengupload</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 5 -->
+                        <div class="mb-0">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-success rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">5</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Kirim Lamaran</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Klik <strong>"Kirim Lamaran"</strong> setelah semua data terisi</li>
+                                        <li class="mb-0">• <strong>Tunggu konfirmasi</strong> dari perusahaan</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -238,14 +278,238 @@
                         <h4 class="fw-bold mb-3 text-dark">
                             <i class="bi bi-bar-chart-line me-2 text-info"></i>Panduan Statistik & Monitoring
                         </h4>
-                        <ol class="text-muted">
-                            <li class="mb-2">Akses menu "Statistik" untuk melihat data tren ketenagakerjaan</li>
-                            <li class="mb-2">Monitor <strong>Tingkat Pengangguran Terbuka (TPT)</strong> per kecamatan</li>
-                            <li class="mb-2">Analisis <strong>rasio ketenagakerjaan tersertifikasi</strong> di setiap wilayah</li>
-                            <li class="mb-2">Gunakan data statistik untuk <strong>pengambilan keputusan berbasis bukti</strong></li>
-                            <li class="mb-2">Manfaatkan dashboard untuk <strong>monitoring dan evaluasi</strong> program ketenagakerjaan</li>
-                            <li class="mb-2">Data mendukung implementasi <strong>Manajemen Risiko Pembangunan Nasional (MRPN)</strong></li>
-                        </ol>
+                        
+                        <!-- Filter Data Statistik -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-info rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">1</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Filter Data Statistik</h6>
+                                    <p class="text-muted mb-2">Sesuaikan parameter untuk melihat data yang spesifik</p>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• <strong>Pilih Kecamatan</strong> - Filter berdasarkan wilayah administrasi</li>
+                                        <li class="mb-1">• <strong>Pilih Pendidikan</strong> - Filter berdasarkan tingkat pendidikan</li>
+                                        <li class="mb-1">• <strong>Pilih Sektor Pekerjaan</strong> - Filter berdasarkan bidang usaha</li>
+                                        <li class="mb-1">• <strong>Pilih Kelompok Usia</strong> - Filter berdasarkan rentang usia</li>
+                                        <li class="mb-0">• <strong>Semua</strong> - Tampilkan data tanpa filter</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tren Ketenagakerjaan -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-info rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">2</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Analisis Tren Ketenagakerjaan</h6>
+                                    <p class="text-muted mb-2">Perbandingan jumlah pekerja dan pengangguran per bulan</p>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card border-light mb-2">
+                                                <div class="card-body py-2">
+                                                    <h6 class="fw-bold text-dark mb-1">Tren Semester 2024</h6>
+                                                    <p class="text-muted small mb-0">Monitoring: Pengangguran</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="text-muted mt-2 mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• <strong>Distribusi Angkatan Kerja</strong> berdasarkan usia dan gender</li>
+                                        <li class="mb-1">• <strong>Distribusi Tenaga Kerja</strong> per sektor pekerjaan</li>
+                                        <li class="mb-1">• <strong>Distribusi per Sektor</strong> - Jumlah berdasarkan</li>
+                                        <li class="mb-0">• <strong>Distribusi Usia & Gender</strong> - Laki-laki & Perempuan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Lengkap Angkatan Kerja -->
+                        <div class="mb-0">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-info rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">3</span>
+                                <div class="w-100">
+                                    <h6 class="fw-bold text-dark mb-2">Data Lengkap Angkatan Kerja</h6>
+                                    <p class="text-muted mb-3">Detail data ekonomi tenaga kerja dan pencari kerja</p>
+                                    
+                                    <!-- Search Box -->
+                                    <div class="card bg-light border-0 mb-3">
+                                        <div class="card-body py-2">
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-text bg-white border-0">
+                                                    <i class="bi bi-search text-muted"></i>
+                                                </span>
+                                                <input type="text" class="form-control border-0 bg-white" placeholder="Cari berdasarkan nama, pendidikan, atau sektor...">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Table Example -->
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-bordered">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Nama</th>
+                                                    <th>Usia</th>
+                                                    <th>Pendidikan</th>
+                                                    <th>Sektor</th>
+                                                    <th>Status</th>
+                                                    <th>Kecamatan</th>
+                                                    <th>Tanggal Update</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Anmal Fariri</strong></td>
+                                                    <td>25</td>
+                                                    <td>SMA</td>
+                                                    <td>Perkebunan</td>
+                                                    <td><span class="badge bg-success">Bekerja</span></td>
+                                                    <td>Sumber Barito</td>
+                                                    <td>15 Mar 2024</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Bri Nenhilifulu</strong></td>
+                                                    <td>24</td>
+                                                    <td>Diploma</td>
+                                                    <td>Jasa</td>
+                                                    <td><span class="badge bg-success">Bekerja</span></td>
+                                                    <td>Muara Laung</td>
+                                                    <td>14 Mar 2024</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Bud Santona</strong></td>
+                                                    <td>32</td>
+                                                    <td>Sarjana</td>
+                                                    <td>Kesehatan</td>
+                                                    <td><span class="badge bg-success">Bekerja</span></td>
+                                                    <td>Permata Intan</td>
+                                                    <td>13 Mar 2024</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <small class="text-muted">Menampilkan 8 dari 250 data</small>
+                                        <nav>
+                                            <ul class="pagination pagination-sm mb-0">
+                                                <li class="page-item disabled">
+                                                    <span class="page-link">Previous</span>
+                                                </li>
+                                                <li class="page-item active"><span class="page-link">1</span></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                    <ul class="text-muted mt-3 mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-1">• Gunakan <strong>fitur pencarian</strong> untuk menemukan data spesifik</li>
+                                        <li class="mb-1">• <strong>Export data</strong> untuk analisis lebih lanjut</li>
+                                        <li class="mb-0">• Manfaatkan <strong>filter multiple</strong> untuk kombinasi parameter</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Sertifikasi & Kartu HEBAT -->
+                <div class="card mb-4 border-0 shadow-lg">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-3 text-dark">
+                            <i class="bi bi-award me-2 text-warning"></i>Program Sertifikasi & Kartu HEBAT
+                        </h4>
+                        
+                        <div class="alert alert-info mb-4">
+                            <i class="bi bi-info-circle me-2"></i>
+                            <strong>Mendukung Visi RPJMD Murung Raya 2025-2029</strong> dalam akselerasi tenaga kerja tersertifikasi
+                        </div>
+                        
+                        <!-- Langkah 1 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-warning rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">1</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Daftar Program Pelatihan</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-0">• Akses melalui <strong>Dinas Tenaga Kerja dan Transmigrasi</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 2 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-warning rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">2</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Manfaatkan Kartu HEBAT</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-0">• Manfaatkan untuk <strong>akses pelatihan sertifikasi gratis</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 3 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-warning rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">3</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Ikuti Uji Kompetensi</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-0">• Ikuti uji kompetensi untuk mendapatkan <strong>sertifikasi BNSP</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 4 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-warning rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">4</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Dapatkan Sertifikasi Kompetensi</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-0">• Tingkatkan <strong>daya saing dengan sertifikasi resmi</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 5 -->
+                        <div class="mb-3">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-warning rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">5</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Akses Penempatan Kerja</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-0">• Manfaatkan sertifikasi untuk <strong>akses lowongan prioritas</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Langkah 6 -->
+                        <div class="mb-0">
+                            <div class="d-flex align-items-start">
+                                <span class="badge bg-warning rounded-circle me-3 mt-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink: 0;">6</span>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2">Monitoring & Evaluasi</h6>
+                                    <ul class="text-muted mb-0 ps-0" style="list-style: none;">
+                                        <li class="mb-0">• Sistem mendukung <strong>pengendalian perencanaan pembangunan daerah</strong> sesuai PP No. 8/2008</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -340,9 +604,9 @@
                                 <i class="bi bi-search me-2 text-primary"></i>Cari Lowongan Kerja
                             </a>
                             <a href="{{ route('peta') }}" class="list-group-item list-group-item-action border-0 px-0 py-2">
-                                <i class="bi bi-map me-2 text-danger"></i>Peta Analitik DSS
+                                <i class="bi bi-map me-2 text-danger"></i>Peta Analitik
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action border-0 px-0 py-2">
+                            <a href="{{ route('statistik') }}" class="list-group-item list-group-item-action border-0 px-0 py-2">
                                 <i class="bi bi-bar-chart-line me-2 text-success"></i>Statistik
                             </a>
                             <a href="{{ route('panduan') }}" class="list-group-item list-group-item-action border-0 px-0 py-2">

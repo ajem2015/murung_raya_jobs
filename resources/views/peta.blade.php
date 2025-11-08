@@ -1,143 +1,124 @@
-@include('layouts.header')
+    @include('layouts.header')
 
-<!-- Hero Section -->
-<section class="text-white bg-dark" style="background-image: linear-gradient(rgba(148, 148, 247, 0.6), rgba(46, 51, 210, 0.6)), url('{{ asset('images/bg_murungraya.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 6rem; padding-bottom: 6rem;">
-    <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-3">
-            Peta Analitik Ketenagakerjaan Kabupaten Murung Raya
-        </h1>
-        <p class="lead mb-4">
-            Sistem Pendukung Keputusan (DSS) Terintegrasi untuk Akselerasi Tenaga Kerja Tersertifikasi
-            <br>
-            Berbasis Data Spasial dan Analitik Cerdas
-        </p>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="bg-light bg-opacity-25 rounded p-4" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
-                    <form method="GET" action="{{ route('peta') }}">
-                        <div class="row g-3">
-                            <div class="col-md-8">
-                                <input type="text" name="search" class="form-control form-control-lg" placeholder="Cari berdasarkan kecamatan atau jenis pekerjaan..." value="{{ request('search') }}">
-                            </div>
-                            <div class="col-md-4">
-                                <select name="id_kecamatan" class="form-select form-select-lg">
-                                    <option value="">Semua Kecamatan</option>
-                                    <option value="1">Murara Laung</option>
-                                    <option value="2">Laung Tuhup</option>
-                                    <option value="3">Permata Intan</option>
-                                    <option value="4">Tanah Siang</option>
-                                    <option value="5">Tanah Siang Selatan</option>
-                                    <option value="6">Barito Tuhup Raya</option>
-                                    <option value="7">Sumber Barito</option>
-                                    <option value="8">Sungai Babuat</option>
-                                    <option value="9">Seribu Riam</option>
-                                    <option value="10">Uut Murung</option>
-                                </select>
-                            </div>
-                        </div>
-                    </form>
+    <!-- Hero Section -->
+    <section class="text-white bg-dark" style="background-image: linear-gradient(rgba(148, 148, 247, 0.6), rgba(46, 51, 210, 0.6)), url('{{ asset('images/bg_murungraya.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 6rem; padding-bottom: 6rem;">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">
+                Peta Analitik Ketenagakerjaan Kabupaten Murung Raya
+            </h1>
+            <p class="lead mb-4">
+                Peta Interaktif Data Ketenagakerjaan Kabupaten Murung Raya
+                <br>
+                Analisis Spasial untuk Perencanaan SDM yang Lebih Efektif
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+                <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                    <i class="bi bi-geo-alt-fill"></i> 10 Kecamatan
+                </span>
+                <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                    <i class="bi bi-people-fill"></i> 5,247 Tenaga Kerja
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Bar -->
+    <section class="py-3 bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="bg-body-secondary rounded-pill p-2">
+                    <ul class="nav nav-pills mb-0" style="gap: 8px;">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center rounded-pill text-dark" 
+                            href="{{ route('home') }}"
+                            style="transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#0d6efd';"
+                            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#212529';">
+                                <i class="bi bi-list-ul me-2"></i> Lowongan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active d-flex align-items-center rounded-pill bg-white text-dark" 
+                            aria-current="page" 
+                            href="{{ route('peta') }}"
+                            style="transition: all 0.3s ease;">
+                                <i class="bi bi-map me-2"></i> Peta
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center rounded-pill text-dark" 
+                            href="{{ route('statistik') }}"
+                            style="transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#0d6efd';"
+                            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#212529';">
+                                <i class="bi bi-bar-chart-line me-2"></i> Statistik
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center rounded-pill text-dark" 
+                            href="{{ route('panduan') }}"
+                            style="transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#0d6efd';"
+                            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#212529';">
+                                <i class="bi bi-journal-bookmark me-2"></i> Panduan
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="d-flex justify-content-center gap-3 mt-4 col-lg-10 mx-auto">
-            <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
-                <i class="bi bi-geo-alt-fill"></i> 10 Kecamatan
-            </span>
-            <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
-                <i class="bi bi-people-fill"></i> 5,247 Tenaga Kerja
-            </span>
-            <span class="badge bg-light bg-opacity-25 fs-6 fw-normal py-2 px-3" style="backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
-                <i class="bi bi-graph-up"></i> DSS Terintegrasi
-            </span>
-        </div>
-    </div>
-</section>
-
-<!-- Navigation Bar -->
-<section class="py-3 bg-white">
-    <div class="container">
-        <div class="d-flex justify-content-center">
-            <div class="bg-body-secondary rounded-pill p-2">
-                <ul class="nav nav-pills mb-0" style="gap: 8px;">
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center rounded-pill text-dark" 
-                           href="{{ route('home') }}"
-                           style="transition: all 0.3s ease;"
-                           onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#0d6efd';"
-                           onmouseout="this.style.backgroundColor='transparent'; this.style.color='#212529';">
-                            <i class="bi bi-list-ul me-2"></i> Lowongan
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active d-flex align-items-center rounded-pill bg-white text-dark" 
-                           aria-current="page" 
-                           href="{{ route('peta') }}"
-                           style="transition: all 0.3s ease;">
-                            <i class="bi bi-map me-2"></i> Peta
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center rounded-pill text-dark" 
-                           href="{{ route('statistik') }}"
-                           style="transition: all 0.3s ease;"
-                           onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#0d6efd';"
-                           onmouseout="this.style.backgroundColor='transparent'; this.style.color='#212529';">
-                            <i class="bi bi-bar-chart-line me-2"></i> Statistik
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center rounded-pill text-dark" 
-                           href="{{ route('panduan') }}"
-                           style="transition: all 0.3s ease;"
-                           onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.color='#0d6efd';"
-                           onmouseout="this.style.backgroundColor='transparent'; this.style.color='#212529';">
-                            <i class="bi bi-journal-bookmark me-2"></i> Panduan
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Dashboard Data Ketenagakerjaan -->
-<section class="py-4 bg-white">
+<!-- Key Metrics Dashboard -->
+<section class="py-5 bg-white">
     <div class="container">
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="card border-0 shadow-lg">
                     <div class="card-body text-center">
-                        <i class="bi bi-people-fill display-6 text-primary mb-2"></i>
-                        <h4 class="fw-bold text-primary" id="totalProductive">42,150</h4>
-                        <p class="text-muted mb-0">Usia Produktif (15-64)</p>
+                        <i class="bi bi-people-fill display-6 text-primary mb-3"></i>
+                        <h3 class="fw-bold text-primary">42,150</h3>
+                        <p class="fw-bold mb-1">Usia Produktif</p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 2.3% dari 2023
+                        </small>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card border-0 shadow-lg">
                     <div class="card-body text-center">
-                        <i class="bi bi-briefcase-fill display-6 text-success mb-2"></i>
-                        <h4 class="fw-bold text-success" id="totalWorking">35,892</h4>
-                        <p class="text-muted mb-0">Bekerja</p>
+                        <i class="bi bi-briefcase-fill display-6 text-success mb-3"></i>
+                        <h3 class="fw-bold text-success">35,892</h3>
+                        <p class="fw-bold mb-1">Bekerja</p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 4.1% pertumbuhan
+                        </small>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card border-0 shadow-lg">
                     <div class="card-body text-center">
-                        <i class="bi bi-person-x-fill display-6 text-danger mb-2"></i>
-                        <h4 class="fw-bold text-danger" id="totalUnemployed">1,247</h4>
-                        <p class="text-muted mb-0">Pengangguran</p>
+                        <i class="bi bi-person-x-fill display-6 text-danger mb-3"></i>
+                        <h3 class="fw-bold text-danger">1,247</h3>
+                        <p class="fw-bold mb-1">Pengangguran</p>
+                        <small class="text-danger">
+                            <i class="bi bi-arrow-down"></i> 8.5% TPT
+                        </small>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card border-0 shadow-lg">
                     <div class="card-body text-center">
-                        <i class="bi bi-award-fill display-6 text-info mb-2"></i>
-                        <h4 class="fw-bold text-info" id="totalCertified">8,430</h4>
-                        <p class="text-muted mb-0">Tersertifikasi</p>
+                        <i class="bi bi-briefcase display-6 text-warning mb-3"></i>
+                        <h3 class="fw-bold text-warning">248</h3>
+                        <p class="fw-bold mb-1"><strong>Lowongan</strong></p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 12 baru bulan ini
+                        </small>
                     </div>
                 </div>
             </div>
@@ -145,681 +126,432 @@
     </div>
 </section>
 
-<!-- Map Section -->
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row">
-            <!-- Left Column - Map & Data -->
-            <div class="col-lg-8">
-                <!-- Peta dengan SHP File -->
-                <div class="card shadow-lg mb-4">
-                    <div class="card-header bg-white py-3">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="fw-bold mb-0 text-dark">
-                                <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
-                                Peta Digital Ketenagakerjaan Kabupaten Murung Raya
+    <!-- Map Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column - Map & Data -->
+                <div class="col-lg-8">
+                    <!-- Peta dengan SHP File -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-header bg-white py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="fw-bold mb-0 text-dark">
+                                    <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                                    Peta Digital Ketenagakerjaan Kabupaten Murung Raya
+                                </h5>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-outline-primary btn-sm active" onclick="loadKecamatanSHP()">
+                                        <i class="bi bi-border-all me-1"></i> Kecamatan
+                                    </button>
+                                    <button type="button" class="btn btn-outline-success btn-sm" onclick="loadJalanSHP()">
+                                        <i class="bi bi-signpost me-1"></i> Jalan
+                                    </button>
+                                    <button type="button" class="btn btn-outline-info btn-sm" onclick="loadSungaiSHP()">
+                                        <i class="bi bi-water me-1"></i> Sungai
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0 position-relative">
+                            <div id="map" style="height: 500px;"></div>
+                            <div id="mapLoading" class="position-absolute top-50 start-50 translate-middle text-center" style="display: none;">
+                                <div class="spinner-border text-primary mb-2" role="status">
+                                    <span class="visually-hidden">Loading SHP file...</span>
+                                </div>
+                                <div class="text-dark bg-light px-3 py-2 rounded">
+                                    <small>Memuat data SHP Murung Raya...</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lowongan Berdasarkan Kecamatan -->
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-white py-3">
+                            <h5 class="fw-bold mb-0 text-dark" id="lowonganTitle">
+                                <i class="bi bi-briefcase-fill me-2 text-warning"></i>
+                                Lowongan di Kecamatan <span class="text-primary">Puruk Cahu</span>
                             </h5>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-outline-primary btn-sm active" onclick="loadKecamatanSHP()">
-                                    <i class="bi bi-border-all me-1"></i> Kecamatan
-                                </button>
-                                <button type="button" class="btn btn-outline-success btn-sm" onclick="loadJalanSHP()">
-                                    <i class="bi bi-signpost me-1"></i> Jalan
-                                </button>
-                                <button type="button" class="btn btn-outline-info btn-sm" onclick="loadSungaiSHP()">
-                                    <i class="bi bi-water me-1"></i> Sungai
-                                </button>
-                            </div>
                         </div>
-                    </div>
-                    <div class="card-body p-0 position-relative">
-                        <div id="map" style="height: 500px;"></div>
-                        <div id="mapLoading" class="position-absolute top-50 start-50 translate-middle text-center" style="display: none;">
-                            <div class="spinner-border text-primary mb-2" role="status">
-                                <span class="visually-hidden">Loading SHP file...</span>
+                        <div class="card-body">
+                            <div id="lowonganContainer">
+                                <!-- Lowongan 1 -->
+                                <div class="card mb-3 border shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <h6 class="fw-bold text-primary mb-1">Staff Administrasi</h6>
+                                                <p class="text-muted small mb-2">
+                                                    <i class="bi bi-building me-1"></i>PT. Sawit Makmur Jaya
+                                                    <span class="mx-2">•</span>
+                                                    <i class="bi bi-geo-alt me-1"></i>Puruk Cahu
+                                                </p>
+                                                <div class="d-flex flex-wrap gap-2 mb-2">
+                                                    <span class="badge bg-light text-dark border">Full Time</span>
+                                                    <span class="badge bg-light text-dark border">SMA/Sederajat</span>
+                                                    <span class="badge bg-light text-dark border">Pengalaman 1 Tahun</span>
+                                                </div>
+                                                <p class="text-muted small mb-0">Mengelola administrasi kantor, surat-menyurat, dan dokumentasi perusahaan</p>
+                                            </div>
+                                            <div class="col-md-4 text-end">
+                                                <div class="mb-2">
+                                                    <span class="fw-bold text-success">Rp 3.2 - 4.0 Juta</span>
+                                                </div>
+                                                <!-- LINK JOB DETAIL -->
+                                                <a href="{{ route('jobs.detail', 1) }}" class="btn btn-primary btn-sm">
+                                                    <i class="bi bi-eye me-1"></i>Lihat Detail
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Lowongan 2 -->
+                                <div class="card mb-3 border shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <h6 class="fw-bold text-primary mb-1">Operator Produksi</h6>
+                                                <p class="text-muted small mb-2">
+                                                    <i class="bi bi-building me-1"></i>PT. Kayu Indah Lestari
+                                                    <span class="mx-2">•</span>
+                                                    <i class="bi bi-geo-alt me-1"></i>Puruk Cahu
+                                                </p>
+                                                <div class="d-flex flex-wrap gap-2 mb-2">
+                                                    <span class="badge bg-light text-dark border">Shift</span>
+                                                    <span class="badge bg-light text-dark border">SMP/Sederajat</span>
+                                                    <span class="badge bg-light text-dark border">Fresh Graduate</span>
+                                                </div>
+                                                <p class="text-muted small mb-0">Mengoperasikan mesin produksi, menjaga kualitas produk, dan memastikan target produksi</p>
+                                            </div>
+                                            <div class="col-md-4 text-end">
+                                                <div class="mb-2">
+                                                    <span class="fw-bold text-success">Rp 2.8 - 3.5 Juta</span>
+                                                </div>
+                                                <!-- LINK JOB DETAIL -->
+                                                <a href="{{ route('jobs.detail', 2) }}" class="btn btn-primary btn-sm">
+                                                    <i class="bi bi-eye me-1"></i>Lihat Detail
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Lowongan 3 -->
+                                <div class="card mb-3 border shadow-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <h6 class="fw-bold text-primary mb-1">Sales Marketing</h6>
+                                                <p class="text-muted small mb-2">
+                                                    <i class="bi bi-building me-1"></i>UD. Berkah Jaya
+                                                    <span class="mx-2">•</span>
+                                                    <i class="bi bi-geo-alt me-1"></i>Puruk Cahu
+                                                </p>
+                                                <div class="d-flex flex-wrap gap-2 mb-2">
+                                                    <span class="badge bg-light text-dark border">Kontrak</span>
+                                                    <span class="badge bg-light text-dark border">D3/S1</span>
+                                                    <span class="badge bg-light text-dark border">Komunikasi Baik</span>
+                                                </div>
+                                                <p class="text-muted small mb-0">Menjual produk perusahaan, membangun relasi dengan customer, dan mencapai target penjualan</p>
+                                            </div>
+                                            <div class="col-md-4 text-end">
+                                                <div class="mb-2">
+                                                    <span class="fw-bold text-success">Rp 2.5 Juta + Komisi</span>
+                                                </div>
+                                                <!-- LINK JOB DETAIL -->
+                                                <a href="{{ route('jobs.detail', 3) }}" class="btn btn-primary btn-sm">
+                                                    <i class="bi bi-eye me-1"></i>Lihat Detail
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-dark bg-light px-3 py-2 rounded">
-                                <small>Memuat data SHP Murung Raya...</small>
-                            </div>
+
+
+                            <!-- Pagination -->
+                            <nav class="mt-4">
+                                <ul class="pagination pagination-sm justify-content-center mb-0">
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Previous</span>
+                                    </li>
+                                    <li class="page-item active"><span class="page-link">1</span></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
 
-                <!-- Data Lengkap Ketenagakerjaan -->
-                <div class="card shadow-lg mb-4">
-                    <div class="card-header bg-white py-3">
-                        <h5 class="fw-bold mb-0 text-dark">
-                            <i class="bi bi-table me-2 text-success"></i>
-                            Laporan Kondisi Ketenagakerjaan - Kabupaten Murung Raya
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-sm table-hover">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Kecamatan</th>
-                                        <th>Usia Produktif</th>
-                                        <th>Status Kerja</th>
-                                        <th>Sektor Pekerjaan</th>
-                                        <th>TPT (%)</th>
-                                        <th>Tersertifikasi</th>
-                                        <th>Rekomendasi DSS</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="employmentTable">
-                                    <!-- Data akan diisi oleh JavaScript -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rekomendasi Perencanaan Pembangunan -->
-                <div class="card shadow-lg">
-                    <div class="card-header bg-white py-3">
-                        <h5 class="fw-bold mb-0 text-dark">
-                            <i class="bi bi-clipboard-data me-2 text-primary"></i>
-                            Rekomendasi DSS untuk Perencanaan Pembangunan
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row" id="dssRecommendations">
-                            <!-- Rekomendasi akan diisi oleh JavaScript -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column - Controls & Analysis -->
-            <div class="col-lg-4">
-
-                <!-- Analisis DSS Lengkap -->
-                <div class="card shadow-lg mb-4">
-                    <div class="card-body">
-                        <h5 class="fw-bold mb-3 text-dark">
-                            <i class="bi bi-graph-up me-2 text-primary"></i>
-                            Analisis Decision Support System
-                        </h5>
-                        
-                        <div class="mb-3">
-                            <label class="form-label small fw-semibold">Jenis Analisis</label>
-                            <select class="form-select form-select-sm" id="dssAnalysis" onchange="runDSSAnalysis()">
-                                <option value="hotspot">Hotspot Pengangguran</option>
-                                <option value="sertifikasi">Distribusi Sertifikasi</option>
-                                <option value="sektor">Cluster Sektor Ekonomi</option>
-                                <option value="potensi">Analisis Potensi Kawasan</option>
-                                <option value="pelatihan">Kebutuhan Pelatihan</option>
-                            </select>
-                        </div>
-
-                        <div id="analysisResults">
-                            <div class="text-center text-muted py-3">
-                                <small>Pilih jenis analisis untuk melihat hasil</small>
+                <!-- Right Column - Daftar Lowongan & Keterangan -->
+                <div class="col-lg-4">
+                    <!-- Keterangan Peta -->
+                    <div class="card shadow-lg mb-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3 text-dark">
+                                <i class="bi bi-info-circle-fill me-2 text-primary"></i>
+                                Keterangan Peta
+                            </h5>
+                            
+                            <!-- Instruksi Interaksi -->
+                            <div class="d-flex align-items-center mb-3 p-2 bg-light rounded">
+                                <i class="bi bi-mouse-fill me-3 text-warning fs-5"></i>
+                                <div>
+                                    <strong class="d-block">Klik Kecamatan</strong>
+                                    <small class="text-muted">Untuk melihat lowongan pekerjaan</small>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Quick Actions -->
-                <div class="card shadow-lg">
-                    <div class="card-body">
-                        <h5 class="fw-bold mb-3 text-dark">
-                            <i class="bi bi-lightning me-2 text-warning"></i>
-                            Aksi Cepat Sistem
-                        </h5>
-                        
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-outline-primary btn-sm" onclick="exportToGeoJSON()">
-                                <i class="bi bi-download me-2"></i>Ekspor Data GeoJSON
-                            </button>
-                            <button class="btn btn-outline-success btn-sm" onclick="generateDSSReport()">
-                                <i class="bi bi-file-earmark-pdf me-2"></i>Laporan DSS
-                            </button>
+                            <!-- Statistik -->
+                            <div class="row text-center">
+                                <div class="col-6 border-end">
+                                    <div class="p-2">
+                                        <i class="bi bi-briefcase-fill text-success fs-4 mb-2"></i>
+                                        <div class="fw-bold text-dark">47</div>
+                                        <small class="text-muted">Total Lowongan</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-2">
+                                        <i class="bi bi-map-fill text-info fs-4 mb-2"></i>
+                                        <div class="fw-bold text-dark">10</div>
+                                        <small class="text-muted">Kecamatan</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- JavaScript untuk Sistem Terintegrasi -->
-<script src="https://unpkg.com/shpjs@4.0.4/dist/shp.js"></script>
-<script>
-// Inisialisasi peta
-const map = L.map('map').setView([-0.6333, 114.3333], 10);
+    <!-- JavaScript untuk Sistem Terintegrasi -->
+    <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.js"></script>
+    <script>
+    // Inisialisasi peta
+    const map = L.map('map').setView([-0.6333, 114.3333], 10);
 
-// Base layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+    // Base layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-// Variables
-let currentLayer = null;
-let shpData = null;
+    // Variables
+    let currentLayer = null;
+    let shpData = null;
+    let selectedKecamatan = null;
 
-// API Integration Class (KAK III.3)
-class KetenagakerjaanAPI {
-    static async getSpatialData() {
-        try {
-            const response = await fetch('/api/spatial-data');
-            return await response.json();
-        } catch (error) {
-            console.error('Error fetching spatial data:', error);
-            return null;
-        }
-    }
-    
-    static async getEmploymentData(kecamatanId = null) {
-        try {
-            const url = kecamatanId ? `/api/employment/${kecamatanId}` : '/api/employment';
-            const response = await fetch(url);
-            return await response.json();
-        } catch (error) {
-            console.error('Error fetching employment data:', error);
-            return null;
-        }
-    }
-    
-    static async getDSSRecommendations(analysisType) {
-        try {
-            const response = await fetch(`/api/dss/${analysisType}`);
-            return await response.json();
-        } catch (error) {
-            console.error('Error fetching DSS recommendations:', error);
-            return null;
-        }
-    }
-    
-    static async searchJobs(filters) {
-        try {
-            const response = await fetch('/api/jobs/search', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(filters)
-            });
-            return await response.json();
-        } catch (error) {
-            console.error('Error searching jobs:', error);
-            return null;
-        }
-    }
-}
+    // Data sample lowongan per kecamatan
+    const lowonganData = {
+        "Sumber Barito": [
+            { posisi: "Operator Excavator", perusahaan: "PT Tambang Berkah", gaji: "Rp 4.5 - 6 Juta", tipe: "Full Time" },
+            { posisi: "Admin Gudang", perusahaan: "CV Sumber Jaya", gaji: "Rp 3 - 4 Juta", tipe: "Full Time" },
+            { posisi: "Driver Truk", perusahaan: "PT Logistik Murung", gaji: "Rp 4 - 5 Juta", tipe: "Full Time" }
+        ],
+        "Murara Laung": [
+            { posisi: "Teknisi Alat Berat", perusahaan: "PT Pertambangan Nusantara", gaji: "Rp 5 - 7 Juta", tipe: "Full Time" },
+            { posisi: "Security", perusahaan: "PT Keamanan Mandiri", gaji: "Rp 2.5 - 3.5 Juta", tipe: "Shift" }
+        ],
+        "Sungai Babuat": [
+            { posisi: "Nelayan", perusahaan: "Koperasi Perikanan", gaji: "Rp 3 - 4 Juta", tipe: "Full Time" },
+            { posisi: "Pengolah Hasil Laut", perusahaan: "UD Laut Sejahtera", gaji: "Rp 2.5 - 3 Juta", tipe: "Full Time" }
+        ],
+        "Laung Tuhup": [
+            { posisi: "Petani Kelapa Sawit", perusahaan: "PT Perkebunan Sawit", gaji: "Rp 3 - 4 Juta", tipe: "Full Time" }
+        ],
+        "Permata Intan": [
+            { posisi: "Operator Crusher", perusahaan: "PT Batu Permata", gaji: "Rp 4 - 5 Juta", tipe: "Full Time" },
+            { posisi: "Quality Control", perusahaan: "PT Batu Permata", gaji: "Rp 3.5 - 4.5 Juta", tipe: "Full Time" }
+        ]
+    };
 
-// Data lengkap sesuai KAK III.2
-const completeEmploymentData = {
-    "Sumber Barito": {
-        // Data kependudukan usia produktif
-        population: {
-            total: 15200,
-            productive_age: 11200,
-            distribution: {
-                "15-24": 3500,
-                "25-40": 5200,
-                "41-55": 2500
-            }
-        },
-        // Status kerja lengkap
-        employment: {
-            formal: 8500,
-            informal: 1300,
-            unemployed: 125,
-            not_in_labor_force: 1275
-        },
-        // Sektor pekerjaan detail
-        sectors: {
-            mining: 3500,
-            plantation: 2500,
-            trade: 2000,
-            services: 1500,
-            tourism: 300,
-            other: 400
-        },
-        // Data sertifikasi
-        certification: {
-            certified: 850,
-            sio: 320,
-            bnsp: 280,
-            k3: 150,
-            other: 100
-        },
-        // Data spasial
-        spatial: {
-            shapefile: 'sumber_barito.shp',
-            roads: ['Jl. Sudirman', 'Jl. Trans Kalimantan'],
-            rivers: ['Sungai Barito'],
-            infrastructure: ['PLN', 'PDAM', 'Puskesmas']
-        },
-        // Metrics DSS
-        metrics: {
-            tpt: 3.1,
-            certified_rate: 18.9,
-            economic_potential: 85,
-            training_needs: ['SIO Pertambangan', 'K3 Migas', 'Digital Skills']
-        }
-    },
-    "Murara Laung": {
-        population: {
-            total: 12800,
-            productive_age: 8900,
-            distribution: {
-                "15-24": 2800,
-                "25-40": 4200,
-                "41-55": 1900
-            }
-        },
-        employment: {
-            formal: 6500,
-            informal: 1000,
-            unemployed: 89,
-            not_in_labor_force: 1311
-        },
-        sectors: {
-            mining: 2800,
-            plantation: 2200,
-            trade: 1500,
-            services: 800,
-            tourism: 200,
-            other: 400
-        },
-        certification: {
-            certified: 450,
-            sio: 150,
-            bnsp: 180,
-            k3: 80,
-            other: 40
-        },
-        spatial: {
-            shapefile: 'murara_laung.shp',
-            roads: ['Jl. Provinsi', 'Jl. Kecamatan'],
-            rivers: ['Sungai Laung'],
-            infrastructure: ['PLN', 'Sekolah']
-        },
-        metrics: {
-            tpt: 4.2,
-            certified_rate: 12.6,
-            economic_potential: 72,
-            training_needs: ['BNSP Perkebunan', 'Pengolahan Hasil', 'Kewirausahaan']
-        }
-    }
-    // Data untuk 8 kecamatan lainnya...
-};
-
-// Fungsi utama untuk load SHP file Kecamatan
-async function loadKecamatanSHP() {
-    showLoading(true);
-    
-    try {
-        // Load dari API atau fallback ke file local
-        const spatialData = await KetenagakerjaanAPI.getSpatialData();
-        let geojson;
+    // Fungsi utama untuk load SHP file Kecamatan
+    async function loadKecamatanSHP() {
+        showLoading(true);
         
-        if (spatialData) {
-            geojson = spatialData;
-        } else {
+        try {
             // Fallback ke file SHP local
             const shpUrl = '/shapefiles/murung_raya_kecamatan.zip';
-            geojson = await shp(shpUrl);
-        }
-        
-        shpData = geojson;
-        
-        // Clear existing layer
-        if (currentLayer) {
-            map.removeLayer(currentLayer);
-        }
-        
-        // Create choropleth map berdasarkan TPT
-        currentLayer = L.geoJSON(geojson, {
-            style: function(feature) {
-                const kecamatan = feature.properties.NAME || feature.properties.KECAMATAN;
-                const data = completeEmploymentData[kecamatan];
-                const tpt = data ? data.metrics.tpt : 0;
-                
-                return {
-                    fillColor: getColorByTPT(tpt),
-                    weight: 2,
-                    opacity: 1,
-                    color: 'white',
-                    dashArray: '3',
-                    fillOpacity: 0.7
-                };
-            },
-            onEachFeature: function(feature, layer) {
-                const kecamatan = feature.properties.NAME || feature.properties.KECAMATAN;
-                const data = completeEmploymentData[kecamatan];
-                
-                if (data) {
-                    layer.bindPopup(createAdvancedPopup(kecamatan, data));
+            const geojson = await shp(shpUrl);
+            
+            shpData = geojson;
+            
+            // Clear existing layer
+            if (currentLayer) {
+                map.removeLayer(currentLayer);
+            }
+            
+            // Create choropleth map
+            currentLayer = L.geoJSON(geojson, {
+                style: function(feature) {
+                    const kecamatan = feature.properties.NAME || feature.properties.KECAMATAN;
+                    const hasLowongan = lowonganData[kecamatan] && lowonganData[kecamatan].length > 0;
+                    
+                    return {
+                        fillColor: hasLowongan ? '#28a745' : '#6c757d',
+                        weight: 2,
+                        opacity: 1,
+                        color: 'white',
+                        fillOpacity: 0.7
+                    };
+                },
+                onEachFeature: function(feature, layer) {
+                    const kecamatan = feature.properties.NAME || feature.properties.KECAMATAN;
+                    const lowongan = lowonganData[kecamatan] || [];
+                    
+                    layer.bindPopup(`
+                        <div class="p-2">
+                            <h6 class="fw-bold text-primary mb-2">${kecamatan}</h6>
+                            <p class="small mb-1"><strong>Lowongan Tersedia:</strong> ${lowongan.length} posisi</p>
+                            <p class="small mb-0">Klik untuk melihat detail lowongan</p>
+                        </div>
+                    `);
                     
                     layer.on({
                         mouseover: function(e) {
-                            highlightFeature(e.target);
+                            e.target.setStyle({
+                                weight: 3,
+                                color: '#666',
+                                fillOpacity: 0.9
+                            });
                         },
                         mouseout: function(e) {
-                            resetHighlight(e.target);
+                            e.target.setStyle({
+                                weight: 2,
+                                color: 'white',
+                                fillOpacity: 0.7
+                            });
                         },
                         click: function(e) {
-                            zoomToFeature(e.target);
-                            showKecamatanDetail(kecamatan, data);
+                            selectedKecamatan = kecamatan;
+                            showLowonganByKecamatan(kecamatan);
+                            updateKeteranganPeta();
                         }
                     });
                 }
-            }
-        }).addTo(map);
-        
-        map.fitBounds(currentLayer.getBounds());
-        updateSHPInfo(geojson);
-        updateEmploymentTable();
-        updateDashboardData();
-        updateDSSRecommendations();
-        
-        showLoading(false);
-        showNotification('Data SHP Kecamatan berhasil dimuat!', 'success');
-        
-    } catch (error) {
-        showLoading(false);
-        console.error('Error loading SHP file:', error);
-        loadSampleData();
-        showNotification('Menggunakan data sample. Pastikan file SHP tersedia.', 'warning');
-    }
-}
-
-// Fungsi untuk menampilkan detail kecamatan
-function showKecamatanDetail(kecamatan, data) {
-    const detailHTML = `
-        <div class="p-3">
-            <h6 class="fw-bold text-primary mb-3">${kecamatan} - Analisis Detail</h6>
+            }).addTo(map);
             
-            <div class="row small mb-3">
-                <div class="col-6">
-                    <strong>Usia Produktif:</strong><br>
-                    <span class="text-info">${data.population.productive_age.toLocaleString()}</span>
-                </div>
-                <div class="col-6">
-                    <strong>Bekerja:</strong><br>
-                    <span class="text-success">${(data.employment.formal + data.employment.informal).toLocaleString()}</span>
-                </div>
-            </div>
+            map.fitBounds(currentLayer.getBounds());
+            updateDaftarKecamatan();
+            updateKeteranganPeta();
             
-            <div class="row small mb-3">
-                <div class="col-6">
-                    <strong>Formal/Informal:</strong><br>
-                    <span>${data.employment.formal.toLocaleString()}/${data.employment.informal.toLocaleString()}</span>
-                </div>
-                <div class="col-6">
-                    <strong>TPT:</strong><br>
-                    <span class="badge ${data.metrics.tpt < 4 ? 'bg-success' : data.metrics.tpt < 6 ? 'bg-warning' : 'bg-danger'}">
-                        ${data.metrics.tpt}%
-                    </span>
-                </div>
-            </div>
+            showLoading(false);
             
-            <div class="mb-3">
-                <strong class="small d-block mb-1">Sektor Pekerjaan:</strong>
-                <div class="d-flex flex-wrap gap-1">
-                    ${Object.entries(data.sectors).slice(0, 4).map(([sector, count]) => 
-                        `<span class="badge bg-secondary">${sector}: ${count}</span>`
-                    ).join('')}
-                </div>
-            </div>
-            
-            <div class="mb-3">
-                <strong class="small d-block mb-1">Sertifikasi:</strong>
-                <div class="d-flex flex-wrap gap-1">
-                    <span class="badge bg-info">Total: ${data.certification.certified}</span>
-                    <span class="badge bg-primary">SIO: ${data.certification.sio}</span>
-                    <span class="badge bg-success">BNSP: ${data.certification.bnsp}</span>
-                </div>
-            </div>
-            
-            <div>
-                <strong class="small d-block mb-1">Rekomendasi Pelatihan:</strong>
-                <div class="d-flex flex-wrap gap-1">
-                    ${data.metrics.training_needs.map(training => 
-                        `<span class="badge bg-warning text-dark">${training}</span>`
-                    ).join('')}
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // Bisa ditampilkan dalam modal atau side panel
-    console.log(detailHTML); // Untuk debugging
-}
-
-// Fungsi untuk run DSS Analysis lengkap
-async function runDSSAnalysis() {
-    const analysisType = document.getElementById('dssAnalysis').value;
-    const resultsDiv = document.getElementById('analysisResults');
-    
-    showLoading(true);
-    
-    try {
-        const recommendations = await KetenagakerjaanAPI.getDSSRecommendations(analysisType);
-        let resultsHTML = '';
-        
-        if (recommendations) {
-            // Gunakan data dari API
-            resultsHTML = generateAnalysisResults(analysisType, recommendations);
-        } else {
-            // Fallback ke data local
-            resultsHTML = generateAnalysisResults(analysisType, completeEmploymentData);
+        } catch (error) {
+            showLoading(false);
+            console.error('Error loading SHP file:', error);
+            alert('Error memuat data SHP. Pastikan file tersedia di server.');
         }
-        
-        resultsDiv.innerHTML = resultsHTML;
-        showLoading(false);
-        
-    } catch (error) {
-        showLoading(false);
-        resultsDiv.innerHTML = `
-            <div class="alert alert-danger">
-                <h6>Error dalam Analisis</h6>
-                <p class="mb-0 small">Terjadi kesalahan saat memproses analisis DSS.</p>
-            </div>
-        `;
     }
-}
 
-// Helper functions
-function generateAnalysisResults(analysisType, data) {
-    switch(analysisType) {
-        case 'hotspot':
-            return `
-                <div class="alert alert-warning">
-                    <h6><i class="bi bi-exclamation-triangle me-2"></i>Hotspot Analysis - Pengangguran</h6>
-                    <p class="mb-2 small">Berdasarkan analisis spasial, ditemukan pola:</p>
-                    <ul class="small mb-0">
-                        <li><strong>Hotspot Tinggi:</strong> Uut Murung (9.1%), Sungai Babuat (8.2%)</li>
-                        <li><strong>Hotspot Sedang:</strong> Tanah Siang Selatan (7.5%), Seribu Riam (6.8%)</li>
-                        <li><strong>Rekomendasi:</strong> Program padat karya dan pelatihan vokasi</li>
-                    </ul>
+    // Fungsi untuk menampilkan lowongan berdasarkan kecamatan
+    function showLowonganByKecamatan(kecamatan) {
+        const lowonganContainer = document.getElementById('lowonganContainer');
+        const lowonganTitle = document.getElementById('lowonganTitle');
+        const lowongan = lowonganData[kecamatan] || [];
+        
+        lowonganTitle.innerHTML = `<i class="bi bi-briefcase me-2 text-warning"></i>Lowongan di ${kecamatan}`;
+        
+        if (lowongan.length > 0) {
+            let html = `
+                <div class="mb-3">
+                    <span class="badge bg-success">${lowongan.length} Lowongan Tersedia</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Posisi</th>
+                                <th>Perusahaan</th>
+                                <th>Gaji</th>
+                                <th>Tipe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            lowongan.forEach(item => {
+                html += `
+                    <tr>
+                        <td><strong>${item.posisi}</strong></td>
+                        <td>${item.perusahaan}</td>
+                        <td>${item.gaji}</td>
+                        <td><span class="badge bg-primary">${item.tipe}</span></td>
+                    </tr>
+                `;
+            });
+            
+            html += `
+                        </tbody>
+                    </table>
                 </div>
             `;
             
-        case 'sertifikasi':
-            return `
-                <div class="alert alert-info">
-                    <h6><i class="bi bi-award me-2"></i>Analisis Distribusi Sertifikasi</h6>
-                    <p class="mb-2 small">Tingkat sertifikasi tenaga kerja:</p>
-                    <ul class="small mb-0">
-                        <li><strong>Rata-rata Kabupaten:</strong> 12.8%</li>
-                        <li><strong>Tertinggi:</strong> Sumber Barito (18.9%)</li>
-                        <li><strong>Terendah:</strong> Sungai Babuat (6.9%)</li>
-                        <li><strong>Rekomendasi:</strong> Akselerasi program Kartu HEBAT</li>
-                    </ul>
+            lowonganContainer.innerHTML = html;
+        } else {
+            lowonganContainer.innerHTML = `
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-briefcase display-4 text-muted mb-3"></i>
+                    <p class="mb-0">Belum ada lowongan tersedia di ${kecamatan}</p>
                 </div>
             `;
-            
-        case 'sektor':
-            return `
-                <div class="alert alert-success">
-                    <h6><i class="bi bi-briefcase me-2"></i>Cluster Analysis - Sektor Ekonomi</h6>
-                    <p class="mb-2 small">Pola sektor ekonomi berdasarkan lokasi:</p>
-                    <ul class="small mb-0">
-                        <li><strong>Cluster Pertambangan:</strong> Sumber Barito, Permata Intan</li>
-                        <li><strong>Cluster Perkebunan:</strong> Murara Laung, Barito Tuhup Raya</li>
-                        <li><strong>Cluster Pariwisata:</strong> Seribu Riam, Tanah Siang</li>
-                        <li><strong>Rekomendasi:</strong> Pengembangan kawasan ekonomi spesifik</li>
-                    </ul>
-                </div>
-            `;
-            
-        case 'potensi':
-            return `
-                <div class="alert alert-primary">
-                    <h6><i class="bi bi-graph-up-arrow me-2"></i>Analisis Potensi Kawasan</h6>
-                    <p class="mb-2 small">Potensi pengembangan berdasarkan data spasial:</p>
-                    <ul class="small mb-0">
-                        <li><strong>High Potential:</strong> Koridor Jl. Sudirman (Sumber Barito)</li>
-                        <li><strong>Medium Potential:</strong> Kawasan sungai (Laung Tuhup)</li>
-                        <li><strong>Development Area:</strong> Zona ekonomi khusus pertambangan</li>
-                    </ul>
-                </div>
-            `;
+        }
     }
-}
 
-// Update functions
-function updateDashboardData() {
-    let totalProductive = 0;
-    let totalWorking = 0;
-    let totalUnemployed = 0;
-    let totalCertified = 0;
-    
-    Object.values(completeEmploymentData).forEach(data => {
-        totalProductive += data.population.productive_age;
-        totalWorking += (data.employment.formal + data.employment.informal);
-        totalUnemployed += data.employment.unemployed;
-        totalCertified += data.certification.certified;
+    // Fungsi untuk update daftar kecamatan
+    function updateDaftarKecamatan() {
+        const daftarKecamatan = document.getElementById('daftarKecamatan');
+        let html = '';
+        
+        Object.keys(lowonganData).forEach(kecamatan => {
+            const lowongan = lowonganData[kecamatan];
+            const jumlah = lowongan ? lowongan.length : 0;
+            
+            html += `
+                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                    <div>
+                        <h6 class="mb-1 fw-bold">${kecamatan}</h6>
+                        <small class="text-muted">${jumlah} lowongan tersedia</small>
+                    </div>
+                    <button class="btn btn-outline-primary btn-sm" onclick="showLowonganByKecamatan('${kecamatan}')">
+                        Lihat
+                    </button>
+                </div>
+            `;
+        });
+        
+        daftarKecamatan.innerHTML = html;
+    }
+
+    // Fungsi untuk update keterangan peta
+    function updateKeteranganPeta() {
+        const totalLowongan = Object.values(lowonganData).reduce((total, lowongan) => total + lowongan.length, 0);
+        const kecamatanAktif = Object.keys(lowonganData).length;
+        
+        document.getElementById('totalLowongan').textContent = totalLowongan;
+        document.getElementById('kecamatanAktif').textContent = `${kecamatanAktif}/10`;
+    }
+
+    // UI Functions
+    function showLoading(show) {
+        document.getElementById('mapLoading').style.display = show ? 'block' : 'none';
+    }
+
+    // Load data saat halaman dibuka
+    document.addEventListener('DOMContentLoaded', function() {
+        loadKecamatanSHP();
     });
-    
-    document.getElementById('totalProductive').textContent = totalProductive.toLocaleString();
-    document.getElementById('totalWorking').textContent = totalWorking.toLocaleString();
-    document.getElementById('totalUnemployed').textContent = totalUnemployed.toLocaleString();
-    document.getElementById('totalCertified').textContent = totalCertified.toLocaleString();
-}
+    </script>
 
-function updateDSSRecommendations() {
-    const recommendationsDiv = document.getElementById('dssRecommendations');
-    
-    recommendationsDiv.innerHTML = `
-        <div class="col-md-6 mb-3">
-            <div class="card border-0 bg-light">
-                <div class="card-body">
-                    <h6 class="fw-bold text-primary">
-                        <i class="bi bi-geo-alt me-2"></i>Rekomendasi Spasial
-                    </h6>
-                    <p class="small text-muted mb-2">Berdasarkan analisis data spasial</p>
-                    <ul class="small mb-0">
-                        <li>Pengembangan kawasan ekonomi di Sumber Barito</li>
-                        <li>Program padat karya di Uut Murung</li>
-                        <li>Infrastruktur jalan di Sungai Babuat</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card border-0 bg-light">
-                <div class="card-body">
-                    <h6 class="fw-bold text-success">
-                        <i class="bi bi-award me-2"></i>Rekomendasi Sertifikasi
-                    </h6>
-                    <p class="small text-muted mb-2">Untuk akselerasi tenaga tersertifikasi</p>
-                    <ul class="small mb-0">
-                        <li>Pelatihan SIO di wilayah pertambangan</li>
-                        <li>Sertifikasi BNSP untuk sektor perkebunan</li>
-                        <li>Digital skills untuk generasi muda</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    `;
-}
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-// UI Functions
-function showLoading(show) {
-    document.getElementById('mapLoading').style.display = show ? 'block' : 'none';
-}
-
-function showNotification(message, type) {
-    // Implementasi notifikasi yang lebih baik
-    console.log(`${type.toUpperCase()}: ${message}`);
-}
-
-function exportToGeoJSON() {
-    if (!shpData) {
-        showNotification('Tidak ada data untuk diekspor', 'error');
-        return;
-    }
-    
-    const dataStr = JSON.stringify(shpData);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-    
-    const linkElement = document.createElement('a');
-    linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', 'murung_raya_ketenagakerjaan.geojson');
-    linkElement.click();
-    
-    showNotification('Data berhasil diekspor sebagai GeoJSON', 'success');
-}
-
-function generateDSSReport() {
-    showNotification('Membuat laporan DSS lengkap...', 'info');
-    // Implementasi generate report PDF
-}
-
-function showAPIDocumentation() {
-    showNotification('Membuka dokumentasi API...', 'info');
-    // Implementasi show API docs
-}
-
-function resetSystem() {
-    if (confirm('Reset sistem ke kondisi awal?')) {
-        location.reload();
-    }
-}
-
-// Event listeners
-document.getElementById('dssForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    runDSSSearch();
-});
-
-async function runDSSSearch() {
-    const formData = new FormData(this);
-    const filters = {
-        search: formData.get('search'),
-        kecamatan: formData.get('kecamatan'),
-        sertifikasi: formData.get('sertifikasi'),
-        sektor: formData.get('sektor'),
-        gaji: formData.get('gaji')
-    };
-    
-    showLoading(true);
-    
-    try {
-        const results = await KetenagakerjaanAPI.searchJobs(filters);
-        // Process and display results
-        showNotification('Pencarian DSS berhasil dijalankan', 'success');
-    } catch (error) {
-        showNotification('Error dalam pencarian DSS', 'error');
-    }
-    
-    showLoading(false);
-}
-
-// Load data saat halaman dibuka
-document.addEventListener('DOMContentLoaded', function() {
-    loadKecamatanSHP();
-});
-</script>
-
-<!-- Leaflet CSS & JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-@include('layouts.footer')
+    @include('layouts.footer')

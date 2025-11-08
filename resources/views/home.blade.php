@@ -9,9 +9,9 @@
             Sistem Informasi Lowongan Pekerjaan Kabupaten Murung Raya
         </h1>
         <p class="lead mb-4">
-            Cari dan temukan lowongan pekerjaan di wilayah Kabupaten Murung Raya.
+            Cari dan temukan lowongan pekerjaan di wilayah Kabupaten Murung Raya
             <br>
-            Bekerja tanpa harus jauh dari keluarga.
+            Bekerja tanpa harus jauh dari keluarga
         </p>
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -122,31 +122,60 @@
     </div>
 </section>
 
-<!-- Career Opportunities Section -->
+<!-- Key Metrics Dashboard -->
 <section class="py-5 bg-white">
     <div class="container">
-        <div class="card mb-4 border-0 shadow-lg">
-            <div class="card-body p-4">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <h3 class="fw-bold text-primary mb-3">
-                            Temukan Peluang Karir Lainnya
-                        </h3>
-                        <p class="lead mb-4">
-                            Jelajahi ribuan lowongan kerja dari berbagai perusahaan di Indonesia
-                        </p>
-                        <a href="https://www.jobstreet.co.id/" target="_blank" class="btn btn-primary btn-lg">
-                            <i class="bi bi-search me-2"></i>Cari Lowongan di JobStreet
-                        </a>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <div class="bg-primary text-white rounded-circle p-4 d-inline-block">
-                            <i class="bi bi-briefcase display-4""></i>
-                        </div>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people-fill display-6 text-primary mb-3"></i>
+                        <h3 class="fw-bold text-primary">42,150</h3>
+                        <p class="fw-bold mb-1">Usia Produktif</p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 2.3% dari 2023
+                        </small>
                     </div>
                 </div>
             </div>
-        </div>  
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-briefcase-fill display-6 text-success mb-3"></i>
+                        <h3 class="fw-bold text-success">35,892</h3>
+                        <p class="fw-bold mb-1">Bekerja</p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 4.1% pertumbuhan
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-x-fill display-6 text-danger mb-3"></i>
+                        <h3 class="fw-bold text-danger">1,247</h3>
+                        <p class="fw-bold mb-1">Pengangguran</p>
+                        <small class="text-danger">
+                            <i class="bi bi-arrow-down"></i> 8.5% TPT
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body text-center">
+                        <i class="bi bi-briefcase display-6 text-warning mb-3"></i>
+                        <h3 class="fw-bold text-warning">248</h3>
+                        <p class="fw-bold mb-1"><strong>Lowongan</strong></p>
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> 12 baru bulan ini
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Job Listings Section -->
@@ -404,6 +433,33 @@
         });
         </script>
     </div>
+</section>
+
+<!-- Career Opportunities Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="card mb-4 border-0 shadow-lg">
+            <div class="card-body p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="fw-bold text-primary mb-3">
+                            Temukan Peluang Karir Lainnya
+                        </h3>
+                        <p class="lead mb-4">
+                            Jelajahi ribuan lowongan kerja dari berbagai perusahaan di Indonesia
+                        </p>
+                        <a href="https://www.jobstreet.co.id/" target="_blank" class="btn btn-primary btn-lg">
+                            <i class="bi bi-search me-2"></i>Cari Lowongan di JobStreet
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="bg-primary text-white rounded-circle p-4 d-inline-block">
+                            <i class="bi bi-briefcase display-4""></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
 </section>
 
 <!-- Program Kartu HEBAT -->
